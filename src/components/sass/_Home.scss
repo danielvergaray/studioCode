@@ -1,0 +1,81 @@
+@use "./reutilizables/tipografias";
+
+@media (min-width: 847px) {
+  .home_desktop {
+    display: block;
+    background-image: url("./assets/imagenes/home/home_fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+
+    .home_desktop-navbar {
+      width: 100%;
+
+      img {
+        width: 15%;
+        margin: 50px;
+      }
+    }
+
+    .home_desktop-title {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+      width: 100%;
+
+      p {
+        color: white;
+        text-align: center;
+        font-size: 60px;
+        margin: 0;
+        font-family: "Unbounded-Extralight";
+        text-transform: uppercase;
+        height: 60px;
+      }
+      p:nth-child(1) {
+        margin-right: 5%;
+      }
+
+      p:nth-child(2) {
+        font-family: "Unbounded-regular";
+        margin-left: 5%;
+      }
+    }
+
+    .home_desktop-icon {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+      width: 100%;
+      text-align: center;
+
+      img {
+        width: 40px;
+      }
+    }
+
+    .home_desktop-subtitulo {
+      color: white;
+      position: absolute;
+      top: 85%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+      width: 12%;
+      text-align: center;
+
+      p {
+        font-size: 30px;
+        margin: 0;
+        line-height: 0.85;
+        font-weight: 100;
+        font-family: "Unbounded-Extralight";
+      }
+    }
+  }
+}
