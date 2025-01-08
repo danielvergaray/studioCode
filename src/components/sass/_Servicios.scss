@@ -1,0 +1,86 @@
+@use "./reutilizables/tipografias";
+@import "./reutilizables/colors";
+
+@media (min-width: 847px) {
+  .home_desktop-servicios {
+    .accordion {
+      display: flex; // Alinea los ítems en fila
+      flex-direction: row; // Coloca los elementos lado a lado
+      height: 550px;
+      .accordion-item {
+        display: flex;
+        flex-direction: row-reverse; // Mantiene header y body apilados dentro de cada ítem
+        //max-width: 15%;
+        justify-content: center;
+        .accordion-header {
+          writing-mode: vertical-rl; // Hace que el texto se lea de abajo hacia arriba
+          transform: rotate(
+            180deg
+          ); // Corrige la orientación del texto para que sea legible
+          text-align: center; // Alinea el texto verticalmente en el header
+          cursor: pointer; // Asegura que sea clickeable
+
+          .accordion-button {
+            background-color: transparent;
+            color: white;
+            font-size: 50px;
+            text-transform: uppercase;
+            margin: 0 auto;
+
+            height: 480px;
+            font-size: 40px;
+            font-family: "Unbounded-Extralight";
+            padding: 0;
+            padding-top: 40px;
+          }
+          .accordion-button::after {
+            display: none; /* Oculta la flecha */
+          }
+          .accordion-icon {
+            
+            display: flex;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            transform: translate(-50%, -50%);
+            transform: rotate(180deg);
+           
+            img {
+              padding-bottom: 0px;
+              width: 40px;
+            }
+          }
+        }
+
+        .accordion-collapse {
+          .accordion-body {
+            flex: none;
+            overflow: auto;
+            padding: 1rem; // Ajusta los márgenes si es necesario
+          }
+        }
+      }
+      .item-activo {
+        width: 100%;
+        padding: 50px;
+        display: flex;
+        justify-content: left;
+
+        .accordion-body {
+          p {
+            margin: 0;
+            color: $blanco;
+          }
+          .home_desktop-servicios-titulo {
+            font-size: 50px;
+            font-family: "Unbounded-regular";
+            color: $blanco;
+          }
+        }
+      }
+    }
+  }
+  .oculto {
+    display: none;
+  }
+}
