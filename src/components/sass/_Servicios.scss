@@ -3,14 +3,15 @@
 
 @media (min-width: 847px) {
   .home_desktop-servicios {
-    .accordion {
+  
+    .acordion-externo {
       display: flex; // Alinea los ítems en fila
       flex-direction: row; // Coloca los elementos lado a lado
-      height: 550px;
+      height: 500px;;
       .accordion-item {
         display: flex;
         flex-direction: row-reverse; // Mantiene header y body apilados dentro de cada ítem
-        //max-width: 15%;
+
         justify-content: center;
         .accordion-header {
           writing-mode: vertical-rl; // Hace que el texto se lea de abajo hacia arriba
@@ -26,8 +27,7 @@
             font-size: 50px;
             text-transform: uppercase;
             margin: 0 auto;
-
-            height: 480px;
+            height: 430px;
             font-size: 40px;
             font-family: "Unbounded-Extralight";
             padding: 0;
@@ -37,14 +37,13 @@
             display: none; /* Oculta la flecha */
           }
           .accordion-icon {
-            
             display: flex;
             position: absolute;
             top: 100%;
-            left: 0%;
+            left: 10%;
             transform: translate(-50%, -50%);
             transform: rotate(180deg);
-           
+
             img {
               padding-bottom: 0px;
               width: 40px;
@@ -53,9 +52,10 @@
         }
 
         .accordion-collapse {
+          width: 100%;
           .accordion-body {
             flex: none;
-            overflow: auto;
+            //overflow: auto;
             padding: 1rem; // Ajusta los márgenes si es necesario
           }
         }
@@ -67,15 +67,122 @@
         justify-content: left;
 
         .accordion-body {
+          padding: 0;
+          width: 100%;
           p {
             margin: 0;
             color: $blanco;
           }
+          .home_desktop-servicios-pretitulo{
+            p{
+              font-family: "RedHatDisplay-Medium";
+              text-transform: uppercase;
+            }
+          }
           .home_desktop-servicios-titulo {
             font-size: 50px;
-            font-family: "Unbounded-regular";
+            font-family: "Unbounded-light";
             color: $blanco;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            width: 80%;
+            
+            .home_desktop-servicios-p {
+              line-height: 0.9;
+              text-transform: uppercase;
+              padding-top: 10px;
+              grid-column: 1;
+            }
+            .home_desktop-servicios-titulo-estrella {
+              grid-column: 2;
+              position: relative;
+              left: 30%;
+              transform: translate(-50%, -20%);
+
+              img {
+                width: 50px;
+              }
+            }
           }
+          span {
+            display: block; // Asegura que el `span` actúe como una línea separadora
+            height: 0.5px; // Define el grosor de la línea
+            background-color: white; // Define el color blanco para la línea
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    .acordion-interno {
+      display: flex;
+      flex-direction: column; /* Restablecer el flujo interno */
+      background-color: transparent;
+      padding: 0 50px 0 0;
+      .accordion-item {
+        display: flex;
+        flex-direction: column;
+
+        .accordion-header {
+          writing-mode: horizontal-tb;
+          transform: rotate(360deg);
+
+          .accordion-button {
+            color: black;
+            background-color: transparent;
+            //height: fit-content;
+
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .servicios {
+      width: 100%;
+
+      span {
+        display: block; // Asegura que el `span` actúe como una línea separadora
+        height: 0.5px; // Define el grosor de la línea
+        background-color: white; // Define el color blanco para la línea
+        width: 100%;
+      }
+      .servicios-cerrado {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        padding: 10px 0;
+        h2 {
+          margin: 0;
+          font-size: 1.25rem;
+          padding: 10px 0;
+          color: white;
+          font-family: "Unbounded-light";
+          text-transform: lowercase;
+        }
+        .servicios-iconoAbrirCerrar {
+          display: flex;
+          justify-content: left;
+          position: relative;
+          left: -15%;
+          
+          i {
+            color: white;
+            font-size: 1.5rem;
+            margin: auto 0;
+            svg{
+              margin-bottom: 5px;
+            }
+          }
+        }
+      }
+      .servicios-abierto {
+        width: 45%;
+        p {
+          font-size: 0.8rem;
+          padding-bottom: 20px;
+          font-family: "RedHatDisplay-Light";
         }
       }
     }

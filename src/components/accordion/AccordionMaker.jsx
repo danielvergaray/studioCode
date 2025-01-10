@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { useContext } from "react";
 import InfoContext from "../infoContext/InfoContext";
+import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 
 const AccordionMaker = () => {
   const [activeKey, setActiveKey] = useState("1"); // Inicialmente abierto el item con eventKey "0"
 
-  const handleToggle = (key) => {
+  const handleToggle = (key) => { /* acordeon externo */
     if (key !== activeKey) {
       // Solo cambia el activo si el nuevo key es diferente al actual
       setActiveKey(key);
@@ -15,8 +16,14 @@ const AccordionMaker = () => {
 
   const { infoServiciosArray } = useContext(InfoContext);
 
+  const [mostrarInfo, setMostrarInfo] = useState(null);
+
+  const toggleInfo = (index) => {
+    setMostrarInfo((prevState) => (prevState === index ? null : index)); // Alternar índice activo
+  };
+
   return (
-    <Accordion activeKey={activeKey} flush>
+    <Accordion className="acordion-externo" activeKey={activeKey} flush>
       {infoServiciosArray.map((servicio, index) => (
         <>
           <Accordion.Item
@@ -46,44 +53,47 @@ const AccordionMaker = () => {
                 <p>{servicio.pretitulo}</p>
               </div>
               <div className="home_desktop-servicios-titulo">
-                <p>{servicio.titulo}</p>
-                <div>
-                  <img src="" alt="" />
+                <p className="home_desktop-servicios-p">{servicio.titulo}</p>
+                <div className="home_desktop-servicios-titulo-estrella">
+                  <img src={servicio.icono_estrella} alt="" />
                 </div>
               </div>
-              <div className="home_desktop-servicios-primero">
-                <p>{servicio.subtitulo1}</p>
-                <p>{servicio.descripcion_subtitulo1}</p>
-                <i></i>
-              </div>
-
-              <p>{servicio.subtitulo2}</p>
-              <p>{servicio.descripcion_subtitulo2}</p>
-              <p>{servicio.subtitulo3}</p>
-              <p>{servicio.descripcion_subtitulo3}</p>
+              {/* Acordion interno */}
+              <>
+                <span></span>
+                {servicio.descripcion_servicios.map(
+                  (descripcionServicio, index) => (
+                    <section className="servicios">
+                      <div className="servicios-cerrado">
+                        <h2>{descripcionServicio.titulo}</h2>
+                        <div className="servicios-iconoAbrirCerrar"
+                          onClick={() => toggleInfo(index)}
+                          style={{ cursor: "pointer" }}
+                        >
+                          <i>
+                            {mostrarInfo === index ? (
+                              
+                              <CiCircleMinus />
+                            ) : (
+                              <CiCirclePlus />
+                            )}
+                          </i>
+                        </div>
+                      </div>
+                      {mostrarInfo === index && (
+                        <div className="servicios-abierto">
+                          <p>{descripcionServicio.descripcion}</p>
+                        </div>
+                      )}
+                      <span></span>
+                    </section>
+                  )
+                )}
+              </>
             </Accordion.Body>
           </Accordion.Item>
         </>
       ))}
-
-      {/* <Accordion.Item eventKey="0">
-        <Accordion.Header onClick={() => handleToggle("0")}>
-          WEB DESIGN
-        </Accordion.Header>
-        <Accordion.Body>web</Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header onClick={() => handleToggle("1")}>
-          BRANDING
-        </Accordion.Header>
-        <Accordion.Body>branding</Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="2">
-        <Accordion.Header onClick={() => handleToggle("2")}>
-          EDITORIAL
-        </Accordion.Header>
-        <Accordion.Body>editorial</Accordion.Body>
-      </Accordion.Item> */}
     </Accordion>
   );
 };
