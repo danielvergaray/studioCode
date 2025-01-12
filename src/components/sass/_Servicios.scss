@@ -7,7 +7,7 @@
     .acordion-externo {
       display: flex; // Alinea los ítems en fila
       flex-direction: row; // Coloca los elementos lado a lado
-      height: 500px;;
+      height: 500px;
       .accordion-item {
         display: flex;
         flex-direction: row-reverse; // Mantiene header y body apilados dentro de cada ítem
@@ -30,7 +30,7 @@
             height: 430px;
             font-size: 40px;
             font-family: "Unbounded-Extralight";
-            padding: 0;
+            padding: 30px;
             padding-top: 40px;
           }
           .accordion-button::after {
@@ -40,7 +40,7 @@
             display: flex;
             position: absolute;
             top: 100%;
-            left: 10%;
+            margin: auto;
             transform: translate(-50%, -50%);
             transform: rotate(180deg);
 
