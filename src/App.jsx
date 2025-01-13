@@ -6,6 +6,7 @@ import Servicios from './components/jxs-pages/Servicios';
 import Portafolio from './components/jxs-pages/Portafolio';
 import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css'
+import Footer from './components/jxs-pages/Footer';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Home />
           <Servicios/>
           <Portafolio/>
+          <Footer/>
         </InfoContextProvider>
       </HashRouter>
     </>

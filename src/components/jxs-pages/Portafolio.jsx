@@ -16,14 +16,24 @@ const Portafolio = () => {
   return (
     <>
       {infoPortafolioArray.map((info, index) => (
-        <div key={index}>
-          <p>{info.pretitulo}</p>
-          <h1>{info.titulo}</h1>
+        <div className="portafolio-header" key={index}>
+          <p className="portafolio-header-pretitulo">{info.pretitulo}</p>
+          <h1 className="portafolio-header-titulo">{info.titulo}</h1>
 
-          <section className="desktop_portafolio">
+          <section className="portafolio-menu">
             {info.menu.map((opcion, index) => (
               <div key={index}>
-                <NavLink onClick={() => seleccionarCategoria(opcion.opcion)}>
+                <NavLink onClick={() => seleccionarCategoria(opcion.opcion)}
+                  style={
+                    index === 0
+                      ? { backgroundColor: "white", color: "#05192D" }
+                      : index === 1
+                      ? { backgroundColor: " #4559DE" }
+                      : index === 2
+                      ? { backgroundColor: " #05192D" }
+                       : { backgroundColor: " #FF6122" }
+                  }
+                  >
                   {opcion.opcion}
                 </NavLink>
               </div>

@@ -1,15 +1,52 @@
+@import "./reutilizables/colors";
+
 @media (min-width: 847px) {
+  .portafolio-header {
+    padding: 100px 50px 0px;
+    text-align: center;
+    background-color: $gris-claro;
+    .portafolio-header-pretitulo {
+      margin: 0;
+      text-transform: uppercase;
+      font-family: "RedHatDisplay-Medium";
+    }
+    .portafolio-header-titulo {
+      margin: 0 auto;
+      width: 55%;
+      line-height: 1;
+      font-family: "Unbounded-light";
+      font-size: 50px;
+      text-transform: uppercase;
+      padding: 10px 0 20px;
+    }
+    .portafolio-menu {
+      display: flex;
+      justify-content: space-around;
+      width: 45%;
+      margin: auto;
+
+      a {
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 30px;
+        color: $blanco;
+        border: 1px solid transparent;
+
+        &:hover{
+          border: 1px solid;
+        }
+      }
+    }
+  }
   .portafolio-proyectos {
     display: flex;
     flex-wrap: wrap;
     padding: 50px 0px;
     width: 100%;
-
+    background-color: $gris-claro;
     .portafolio-proyectos-item {
       width: 33.33%;
-
       padding: 0px 0;
-
       overflow: hidden; // Asegura que la imagen no salga del recuadro
       position: relative;
 
