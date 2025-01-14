@@ -24,6 +24,11 @@ import guiaEntel1 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_
 import guiaEntel2 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_02.jpg";
 import guiaEntel3 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_03.png";
 import guiaEntel4 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_04.png";
+import nuna1 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_01.jpg";
+import nuna2 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_02.jpg";
+import nuna3 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_03.jpg";
+import nuna4 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_04.jpg";
+import nuna5 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_05.jpg";
 
 const InfoContextProvider = ({ children }) => {
   const informacion = [
@@ -192,6 +197,17 @@ const InfoContextProvider = ({ children }) => {
           imagenRecuadro: guiaEntel1,
           imagenes: [
             guiaEntel1, guiaEntel2, guiaEntel3, guiaEntel4
+          ]
+        },
+        {
+          id: 7,
+          categoria: "branding",
+          titulo: "nuna",
+          cliente: "",
+          descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          imagenRecuadro: nuna1,
+          imagenes: [
+            nuna1, nuna2, nuna3, nuna4
           ]
         },
       ]

@@ -1,5 +1,57 @@
-@media (min-width: 847px){
-    .footer{
-        padding: 50px;
+@import "./reutilizables/colors";
+
+@media (min-width: 847px) {
+  .footer {
+    padding: 100px;
+    background-color: $azul-oscuro;
+    color: $blanco;
+
+    .footer-icon {
+      margin: auto;
+      padding-bottom: 20px;
+      img{
+        width: 50px;
+      }
     }
+    .footer-pretitulo {
+      margin: 0;
+    }
+    .footer-titulo {
+      font-size: 2rem;
+      text-transform: uppercase;
+      width: 40%;
+      line-height: 1.2;
+      font-family: "Unbounded-light";
+
+      p {
+        margin: 0;
+        padding-bottom: 20px;
+      }
+    }
+    .footer-boton {
+      padding: 15px;
+      border: 1px solid $blanco;
+      display: grid;
+      grid-template-columns: 90% 10%;
+      cursor: pointer;
+      .footer-boton-texto {
+        grid-column: 1;
+        margin: auto 0;
+        p {
+          margin: auto;
+          font-family: "Unbounded-ExtraLight";
+          font-size: 0.8rem;
+        }
+      }
+      .footer-boton-flecha {
+        grid-column: 2;
+        text-align: right;
+        padding-right: 5px;
+        svg {
+          scale: 2.5;
+          stroke-width: 1;
+        }
+      }
+    }
+  }
 }
