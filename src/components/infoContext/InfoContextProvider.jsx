@@ -51,20 +51,23 @@ const InfoContextProvider = ({ children }) => {
           titulo: "web design",
           icono_flecha: iconoFlecha,
           icono_estrella: iconoEstrella,
-          descripcion_servicios : [
+          descripcion_servicios: [
             {
               titulo: "web page",
-              descripcion: "Creamos sitios web funcionales, atractivos y adaptados a las necesidades de tu proyecto, para fortalecer la presencia digital de tu marca",
+              descripcion:
+                "Creamos sitios web funcionales, atractivos y adaptados a las necesidades de tu proyecto, para fortalecer la presencia digital de tu marca",
             },
             {
               titulo: "Landingpage",
-              descripcion: "Desarrollamos sitios web simples y temporales, diseñados específicamente para un objetivo concreto, y los optimizamos para asegurar que logres lo que necesitas. Son ideales para campañas, informes y más",
+              descripcion:
+                "Desarrollamos sitios web simples y temporales, diseñados específicamente para un objetivo concreto, y los optimizamos para asegurar que logres lo que necesitas. Son ideales para campañas, informes y más",
             },
             {
               titulo: "INVITACIÓN DIGITAL",
-              descripcion: "Diseñamos invitaciones interactivas con enlaces, imágenes y elementos visuales para contar la historia de nuestros clientes. Son la opción ideal para eventos como bodas, fiestas, conferencias y otras celebraciones",
+              descripcion:
+                "Diseñamos invitaciones interactivas con enlaces, imágenes y elementos visuales para contar la historia de nuestros clientes. Son la opción ideal para eventos como bodas, fiestas, conferencias y otras celebraciones",
             },
-          ]
+          ],
         },
         {
           item: "2",
@@ -72,20 +75,23 @@ const InfoContextProvider = ({ children }) => {
           titulo: "branding",
           icono_flecha: iconoFlecha,
           icono_estrella: iconoEstrella,
-          descripcion_servicios : [
+          descripcion_servicios: [
             {
               titulo: "Logotipo",
-              descripcion: "Te ayudaremos a crear una representación visual única para tu marca utilizando texto, símbolos o imágenes. Diseñaremos una identidad fácilmente reconocible que refleje los valores y la personalidad de tu marca",
+              descripcion:
+                "Te ayudaremos a crear una representación visual única para tu marca utilizando texto, símbolos o imágenes. Diseñaremos una identidad fácilmente reconocible que refleje los valores y la personalidad de tu marca",
             },
             {
               titulo: "Identidad corporativa",
-              descripcion: "Dale a tu marca un estilo único y coherente, a través de elementos visuales que la representen. Juntos, descubriremos los colores, tipografías, estilos gráficos y piezas personalizadas que mejor se adapten a tus necesidades",
+              descripcion:
+                "Dale a tu marca un estilo único y coherente, a través de elementos visuales que la representen. Juntos, descubriremos los colores, tipografías, estilos gráficos y piezas personalizadas que mejor se adapten a tus necesidades",
             },
             {
               titulo: "Packaging",
-              descripcion: "Diseñaremos el empaque de tu producto no solo con un enfoque funcional, sino también para atraer a los consumidores, reflejando la identidad y los valores de tu marca",
+              descripcion:
+                "Diseñaremos el empaque de tu producto no solo con un enfoque funcional, sino también para atraer a los consumidores, reflejando la identidad y los valores de tu marca",
             },
-          ]
+          ],
         },
         {
           item: "3",
@@ -93,20 +99,23 @@ const InfoContextProvider = ({ children }) => {
           titulo: "editorial",
           icono_flecha: iconoFlecha,
           icono_estrella: iconoEstrella,
-          descripcion_servicios : [
+          descripcion_servicios: [
             {
               titulo: "Brochures",
-              descripcion: "Creamos piezas gráficas, tanto impresas como digitales, como folletos, trípticos y brochures, para transmitir la información que necesitas de forma visualmente impactante y efectiva",
+              descripcion:
+                "Creamos piezas gráficas, tanto impresas como digitales, como folletos, trípticos y brochures, para transmitir la información que necesitas de forma visualmente impactante y efectiva",
             },
             {
               titulo: "Publicaciones",
-              descripcion: "Nos enfocamos en el diseño y maquetación de publicaciones impresas y digitales, como revistas, guías y libros, asegurando una presentación visual atractiva, profesional y coherente con la identidad de tu contenido",
+              descripcion:
+                "Nos enfocamos en el diseño y maquetación de publicaciones impresas y digitales, como revistas, guías y libros, asegurando una presentación visual atractiva, profesional y coherente con la identidad de tu contenido",
             },
             {
               titulo: "Informes",
-              descripcion: "Comunica las cifras y avances de tu empresa de forma clara, mediante infografías, reportes visuales y presentaciones de datos, transformando los resultados y logros en elementos gráficos fácilmente comprensibles y atractivos",
+              descripcion:
+                "Comunica las cifras y avances de tu empresa de forma clara, mediante infografías, reportes visuales y presentaciones de datos, transformando los resultados y logros en elementos gráficos fácilmente comprensibles y atractivos",
             },
-          ]
+          ],
         },
       ],
 
@@ -127,10 +136,8 @@ const InfoContextProvider = ({ children }) => {
             {
               opcion: "editorial",
             },
-
-          ]
-
-        }
+          ],
+        },
       ],
       proyectos_portafolio: [
         {
@@ -138,90 +145,189 @@ const InfoContextProvider = ({ children }) => {
           categoria: "webdesign",
           titulo: "invitación digital para boda",
           cliente: "dani & pao",
-          descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
           imagenRecuadro: bodaDaniPao1,
           imagenes: [
-            bodaDaniPao1, bodaDaniPao2, bodaDaniPao3,
-          ]
+            {
+              imagenes: bodaDaniPao1,
+            },
+            {
+              imagenes: bodaDaniPao2,
+            },
+            {
+              imagenes: bodaDaniPao3,
+            },
+          ],
         },
         {
           id: 2,
           categoria: "webdesign",
           titulo: "cumpleaños sebas",
-          cliente: "",
-          descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
           imagenRecuadro: cumpleañosSebas1,
           imagenes: [
-            cumpleañosSebas1, cumpleañosSebas2, cumpleañosSebas3
-          ]
+            {
+              imagenes: cumpleañosSebas1,
+            },
+            {
+              imagenes: cumpleañosSebas2,
+            },
+            {
+              imagenes: cumpleañosSebas3,
+            },
+          
+          ],
         },
         {
           id: 3,
           categoria: "webdesign",
           titulo: "cumpleaños sebas",
-          cliente: "",
-          descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
           imagenRecuadro: cumpleañosSebas1,
           imagenes: [
-            cumpleañosSebas1, cumpleañosSebas2, cumpleañosSebas3
-          ]
+            {
+              imagenes: cumpleañosSebas1,
+            },
+            {
+              imagenes: cumpleañosSebas2,
+            },
+            {
+              imagenes: cumpleañosSebas3,
+            },
+         
+          ],
         },
         {
           id: 4,
           categoria: "branding",
           titulo: "CYN",
-          cliente: "",
-          descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
           imagenRecuadro: CYN1,
           imagenes: [
-            CYN1, CYN2, CYN3, CYN4, CYN5
-          ]
+            {
+              imagenes: CYN1,
+            },
+            {
+              imagenes: CYN2,
+            },
+            
+            {
+              imagenes: CYN3,
+            },
+            
+            {
+              imagenes: CYN4,
+            },
+            
+            {
+              imagenes: CYN5,
+            },
+            
+            
+          ],
         },
         {
           id: 5,
           categoria: "branding",
           titulo: "mondi",
-          cliente: "",
-          descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
           imagenRecuadro: mondi1,
           imagenes: [
-            mondi1, mondi2, mondi3, mondi4, mondi5
-          ]
+            {
+              imagenes: mondi1,
+            },
+            {
+              imagenes: mondi2,
+            },
+            {
+              imagenes: mondi3,
+            },
+            {
+              imagenes: mondi4,
+            },
+            {
+              imagenes: mondi5,
+            },
+          ],
         },
         {
           id: 6,
           categoria: "editorial",
           titulo: "guia entel",
-          cliente: "",
-          descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
           imagenRecuadro: guiaEntel1,
           imagenes: [
-            guiaEntel1, guiaEntel2, guiaEntel3, guiaEntel4
-          ]
+            {
+              imagenes: guiaEntel1,
+            },
+            {
+              imagenes: guiaEntel2,
+            },
+            {
+              imagenes: guiaEntel3,
+            },
+            {
+              imagenes: guiaEntel4,
+            },
+             
+          ],
         },
         {
           id: 7,
           categoria: "branding",
           titulo: "nuna",
-          cliente: "",
-          descripcion: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
           imagenRecuadro: nuna1,
           imagenes: [
-            nuna1, nuna2, nuna3, nuna4
-          ]
+            {
+              imagenes: nuna1,
+            },
+            {
+              imagenes: nuna2,
+            },
+            {
+              imagenes: nuna3,
+            },
+            {
+              imagenes: nuna4,
+            },
+             
+          ],
         },
-      ]
-
-      
+      ],
+      colores: [
+        {
+          azul_rey: "#4559DE",
+          azul_oscuro: "#05192D",
+          naranja: "#FF6122",
+          blanco: "#FFFFFF",
+          gris_claro: "#EDEDED",
+        },
+      ],
     },
   ];
 
   const values = {
     infoHomeArray: Object.values(informacion[0].home),
+    colores: informacion[0].colores[0], // Acceder al primer elemento directamente
     infoServiciosArray: Object.values(informacion[0].servicios),
     infoPortafolioArray: Object.values(informacion[0].portafolio),
-    infoPortafolioProyectoArray: Object.values(informacion[0].proyectos_portafolio),
-   
+    infoPortafolioProyectoArray: Object.values(
+      informacion[0].proyectos_portafolio
+    ),
   };
 
   return <InfoContext.Provider value={values}>{children}</InfoContext.Provider>;

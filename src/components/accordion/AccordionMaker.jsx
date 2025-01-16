@@ -14,7 +14,7 @@ const AccordionMaker = () => {
     }
   };
 
-  const { infoServiciosArray } = useContext(InfoContext);
+  const { infoServiciosArray, colores } = useContext(InfoContext);
 
   const [mostrarInfo, setMostrarInfo] = useState(null);
 
@@ -32,10 +32,10 @@ const AccordionMaker = () => {
             className={activeKey === servicio.item ? "item-activo" : ""}
             style={
               index === 0
-                ? { backgroundColor: " #4559DE" }
+                ? { backgroundColor: `${colores.azul_rey}` }
                 : index === 1
-                ? { backgroundColor: " #05192D" }
-                : { backgroundColor: " #FF6122" }
+                ? { backgroundColor: `${colores.azul_oscuro}` }
+                : { backgroundColor: `${colores.naranja}` }
             }
           >
             <Accordion.Header

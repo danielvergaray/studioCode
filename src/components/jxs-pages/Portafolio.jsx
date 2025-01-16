@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import Popup from "./Popup";
 
 const Portafolio = () => {
-  const { infoPortafolioArray, infoPortafolioProyectoArray } =
+  const { infoPortafolioArray, infoPortafolioProyectoArray, colores } =
     useContext(InfoContext);
 
   const [categoriaSeleccionado, setCategoriaSeleccionada] = useState("todos");
@@ -15,10 +15,10 @@ const Portafolio = () => {
 
   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
 
-  const funcionSeleccionarProyecto = (index) =>{
-    setProyectoSeleccionado(index)
-    console.log(index)
-  }
+  const funcionSeleccionarProyecto = (index) => {
+    setProyectoSeleccionado(index);
+    console.log(index);
+  };
   return (
     <>
       {infoPortafolioArray.map((info, index) => (
@@ -33,12 +33,12 @@ const Portafolio = () => {
                   onClick={() => seleccionarCategoria(opcion.opcion)}
                   style={
                     index === 0
-                      ? { backgroundColor: "white", color: "#05192D" }
+                      ? { backgroundColor: `${colores.blanco}`, color: `${colores.azul_oscuro}` }
                       : index === 1
-                      ? { backgroundColor: " #4559DE" }
+                      ? { backgroundColor: `${colores.azul_rey}` }
                       : index === 2
-                      ? { backgroundColor: " #05192D" }
-                      : { backgroundColor: " #FF6122" }
+                      ? { backgroundColor: `${colores.azul_oscuro}` }
+                      : { backgroundColor: `${colores.naranja}` }
                   }
                 >
                   {opcion.opcion}
@@ -52,8 +52,10 @@ const Portafolio = () => {
       <section className="portafolio-proyectos">
         {categoriaSeleccionado === "todos"
           ? infoPortafolioProyectoArray.map((proyecto, index) => (
-              <div key={index} className="portafolio-proyectos-item"
-              onClick={()=>funcionSeleccionarProyecto(index)}
+              <div
+                key={index}
+                className="portafolio-proyectos-item"
+                onClick={() => funcionSeleccionarProyecto(index)}
               >
                 <img src={proyecto.imagenRecuadro} alt="" />
               </div>
@@ -69,9 +71,11 @@ const Portafolio = () => {
               ))}
       </section>
 
-      {proyectoSeleccionado !== null ? <Popup proyectoSeleccionado= {proyectoSeleccionado} /> 
-      
-      : null}
+      {proyectoSeleccionado !== null ? (
+        <div className="popup-container">
+          <Popup proyectoSeleccionado={proyectoSeleccionado} />
+        </div>
+      ) : null}
     </>
   );
 };
