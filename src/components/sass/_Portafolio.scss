@@ -22,18 +22,19 @@
     .portafolio-menu {
       display: flex;
       justify-content: space-around;
-      width: 45%;
+      width: 42%;
       margin: auto;
-
+      font-family: "Unbounded-light";
       a {
         text-decoration: none;
         padding: 5px 10px;
         border-radius: 30px;
-        color: $blanco;
         border: 1px solid transparent;
-
-        &:hover{
+        color: $azul-oscuro;
+        background-color: transparent;
+        &:hover {
           border: 1px solid;
+          color: $blanco;
         }
       }
     }
@@ -41,7 +42,7 @@
   .portafolio-proyectos {
     display: flex;
     flex-wrap: wrap;
-    padding: 50px 0px;
+    padding: 25px 0px 100px;
     width: 100%;
     background-color: $gris-claro;
     .portafolio-proyectos-item {
@@ -62,5 +63,27 @@
         }
       }
     }
+  }
+  .portafolio-proyectos-btn-verMas{
+    background-color: $gris-claro;
+    text-align: center;
+    padding-bottom: 50px;
+
+    button{
+      padding: 10px 50px;
+      text-transform: uppercase;
+      font-family: "Unbounded-Extralight";
+      border: 1px solid $azul_oscuro;
+      color: $azul_oscuro;
+
+      &:hover{
+        background-color: $azul_oscuro;
+        color: $blanco;
+      }
+    }
+  }
+
+  .popup-open {
+    overflow: hidden;
   }
 }

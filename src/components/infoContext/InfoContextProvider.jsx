@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import InfoContext from "./InfoContext";
 import home_fondo from "../../assets/imagenes/home/home_fondo.jpg";
 import navBar_nombreEmpresa from "../../assets/imagenes/navbar/nombreEmpresa.png";
@@ -163,7 +163,7 @@ const InfoContextProvider = ({ children }) => {
         {
           id: 2,
           categoria: "webdesign",
-          titulo: "cumpleaños sebas",
+          titulo: "invitación digital sebas",
           cliente: "Cliente por definir",
           descripcion:
             "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
@@ -239,7 +239,7 @@ const InfoContextProvider = ({ children }) => {
           titulo: "mondi",
           cliente: "Cliente por definir",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium accusamus iure tempore dolorem voluptate, maiores ullam asperiores facere quis harum expedita voluptatem ad vero in a? Laboriosam nostrum qui perferendis facere id, ex eveniet illo deleniti, officia natus ducimus reiciendis.",
           imagenRecuadro: mondi1,
           imagenes: [
             {
@@ -304,6 +304,9 @@ const InfoContextProvider = ({ children }) => {
             {
               imagenes: nuna4,
             },
+            {
+              imagenes: nuna5,
+            },
              
           ],
         },
@@ -320,6 +323,20 @@ const InfoContextProvider = ({ children }) => {
     },
   ];
 
+   /* PARA ABRIR POPUP */
+
+   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
+
+   const funcionSeleccionarProyecto = (index) => {
+     setProyectoSeleccionado(index);
+     document.body.classList.add("popup-open");
+   };
+
+   const cerrarPopup = () =>{
+    setProyectoSeleccionado(null);
+    document.body.classList.remove("popup-open");
+   }
+
   const values = {
     infoHomeArray: Object.values(informacion[0].home),
     colores: informacion[0].colores[0], // Acceder al primer elemento directamente
@@ -328,6 +345,11 @@ const InfoContextProvider = ({ children }) => {
     infoPortafolioProyectoArray: Object.values(
       informacion[0].proyectos_portafolio
     ),
+    proyectoSeleccionado,
+    setProyectoSeleccionado,
+    funcionSeleccionarProyecto,
+    cerrarPopup
+
   };
 
   return <InfoContext.Provider value={values}>{children}</InfoContext.Provider>;

@@ -22,6 +22,7 @@ const AccordionMaker = () => {
     setMostrarInfo((prevState) => (prevState === index ? null : index)); // Alternar índice activo
   };
 
+
   return (
     <Accordion className="acordion-externo" activeKey={activeKey} flush>
       {infoServiciosArray.map((servicio, index) => (
