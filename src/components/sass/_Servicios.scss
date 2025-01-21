@@ -3,11 +3,10 @@
 
 @media (min-width: 847px) {
   .home_desktop-servicios {
-  
     .acordion-externo {
       display: flex; // Alinea los ítems en fila
       flex-direction: row; // Coloca los elementos lado a lado
-      height: 500px;
+      height: 615px;
       .accordion-item {
         display: flex;
         flex-direction: row-reverse; // Mantiene header y body apilados dentro de cada ítem
@@ -56,7 +55,7 @@
           .accordion-body {
             flex: none;
             //overflow: auto;
-            padding: 1rem; // Ajusta los márgenes si es necesario
+            //padding: 1rem; // Ajusta los márgenes si es necesario
           }
         }
       }
@@ -69,12 +68,13 @@
         .accordion-body {
           padding: 0;
           width: 100%;
+          //display: flex;
           p {
             margin: 0;
             color: $blanco;
           }
-          .home_desktop-servicios-pretitulo{
-            p{
+          .home_desktop-servicios-pretitulo {
+            p {
               font-family: "RedHatDisplay-Medium";
               text-transform: uppercase;
             }
@@ -84,9 +84,9 @@
             font-family: "Unbounded-light";
             color: $blanco;
             display: grid;
-            grid-template-columns: 70% 30%;
+            grid-template-columns: 90% 10%;
             width: 80%;
-            
+
             .home_desktop-servicios-p {
               line-height: 0.9;
               text-transform: uppercase;
@@ -108,8 +108,22 @@
             display: block; // Asegura que el `span` actúe como una línea separadora
             height: 0.5px; // Define el grosor de la línea
             background-color: white; // Define el color blanco para la línea
-            width: 80%;
+            width: 92%;
           }
+        }
+        /* PARA PODER DIVIDIR Y COLOCAR LA IMAGEN */
+        .cuerpo_acordion {
+          display: grid;
+          grid-template-columns: 60% 40%;
+
+          .prueba{
+            img {
+              width: 100%;
+              //height: 400px;
+            }
+          }
+
+          
         }
       }
     }
@@ -151,7 +165,7 @@
       }
       .servicios-cerrado {
         display: grid;
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 90% 10%;
         padding: 10px 0;
         h2 {
           margin: 0;
@@ -166,12 +180,12 @@
           justify-content: left;
           position: relative;
           left: -15%;
-          
+
           i {
             color: white;
             font-size: 1.5rem;
             margin: auto 0;
-            svg{
+            svg {
               margin-bottom: 5px;
             }
           }
