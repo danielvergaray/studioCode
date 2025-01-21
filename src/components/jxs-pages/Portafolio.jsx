@@ -68,27 +68,35 @@ const Portafolio = () => {
                   onClick={() => seleccionarCategoria(opcion.opcion)}
                   style={{
                     backgroundColor:
-                      hoverState[menuIndex] ||
-                      opcion.opcion === categoriaSeleccionada
+                      opcion.opcion === categoriaSeleccionada ||
+                      hoverState[menuIndex]
+                        ? "transparent" // Fondo transparente para estado activo o hover
+                        : menuIndex === 0
+                        ? colores.gris_oscuro
+                        : menuIndex === 1
+                        ? colores.azul_rey
+                        : menuIndex === 2
+                        ? colores.azul_oscuro
+                        : menuIndex === 3
+                        ? colores.naranja
+                        : "transparent", // Fondo definido para estado inactivo
+                    color:
+                      opcion.opcion === categoriaSeleccionada ||
+                      hoverState[menuIndex]
                         ? menuIndex === 0
-                          ? colores.blanco
+                          ? colores.gris_oscuro
                           : menuIndex === 1
                           ? colores.azul_rey
                           : menuIndex === 2
                           ? colores.azul_oscuro
                           : menuIndex === 3
                           ? colores.naranja
-                          : "transparent"
-                        : "transparent",
-                    color:
-                      opcion.opcion === categoriaSeleccionada ||
-                      hoverState[menuIndex]
-                        ? colores.blanco
-                        : colores.azul_oscuro,
+                          : colores.blanco // Color de texto correspondiente al fondo inactivo
+                        : colores.blanco, // Texto blanco en estado inactivo
                     border: `1px solid`,
                     borderColor:
                       menuIndex === 0
-                        ? colores.blanco
+                        ? colores.gris_oscuro
                         : menuIndex === 1
                         ? colores.azul_rey
                         : menuIndex === 2

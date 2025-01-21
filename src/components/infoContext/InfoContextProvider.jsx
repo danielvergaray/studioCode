@@ -4,7 +4,7 @@ import home_fondo from "../../assets/imagenes/home/home_fondo.jpg";
 import navBar_nombreEmpresa from "../../assets/imagenes/navbar/nombreEmpresa.png";
 import iconoEstrella from "../../assets/imagenes/home/iconoEstrella.png";
 import iconoFlecha from "../../assets/imagenes/servicios/flecha.png";
-import bodaDaniPao1 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_01.jpg";
+import bodaDaniPao1 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_01.jpeg";
 import bodaDaniPao2 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_02.jpg";
 import bodaDaniPao3 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_03.jpg";
 import cumpleañosSebas1 from "../../assets/imagenes/proyectos/cumpleañosSebas/SEBAS_01.jpg";
@@ -320,6 +320,7 @@ const InfoContextProvider = ({ children }) => {
           naranja: "#FF6122",
           blanco: "#FFFFFF",
           gris_claro: "#EDEDED",
+          gris_oscuro: "#B3B3B3",
         },
       ],
     },

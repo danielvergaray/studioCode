@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import InfoContext from "../infoContext/InfoContext";
+import DropdownMaker from "../Dropdown/DropdownMaker";
 
 const Home = () => {
   const { infoHomeArray } = useContext(InfoContext);
@@ -9,9 +10,13 @@ const Home = () => {
     <section className="home_desktop">
       {infoHomeArray.map((info, index) => (
         <div key={index}>
-          
-          <div className="home_desktop-navbar" >
-            <img src={info.navBar_nombreEmpresa} alt="logo-studioCode" />
+          <div className="home_desktop-navbar">
+            <div className="home_desktop-navbar-logo">
+              <img src={info.navBar_nombreEmpresa} alt="logo-studioCode" />
+            </div>
+            <div className="home_desktop-navbar-idioma">
+              <DropdownMaker/>
+            </div>
           </div>
 
           <div className="home_desktop-title" key={index}>

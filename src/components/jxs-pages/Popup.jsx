@@ -3,23 +3,25 @@ import { useContext } from "react";
 import InfoContext from "../infoContext/InfoContext";
 import CarouselMaker from "../carousel/CarouselMaker";
 import { IoIosCloseCircleOutline } from "react-icons/io";
+import { IoIosClose } from "react-icons/io";
 
 const Popup = ({ proyectoSeleccionado, proyectosFiltrados }) => {
-  const { infoPortafolioProyectoArray, colores, cerrarPopup } = useContext(InfoContext);
+  const { infoPortafolioProyectoArray, colores, cerrarPopup } =
+    useContext(InfoContext);
 
   /*  console.log(proyectoSeleccionado)
   console.log(infoPortafolioProyectoArray) */
   //console.log(infoPortafolioProyectoArray[proyectoSeleccionado].categoria);
 
   const categoriaSeleccionada =
-  proyectosFiltrados[proyectoSeleccionado].categoria;
+    proyectosFiltrados[proyectoSeleccionado].categoria;
 
   return (
     <>
-      <div className="popup-botonCerrar"
-      onClick={cerrarPopup}
-      >
-        <IoIosCloseCircleOutline />
+      <div className="popup-botonCerrar" onClick={cerrarPopup}>
+        <div>
+        <IoIosClose />
+        </div>
       </div>
       <div
         className="popup-categoria"
@@ -44,9 +46,7 @@ const Popup = ({ proyectoSeleccionado, proyectosFiltrados }) => {
             </p>
           </div>
           <div className="popup-informacion-descripcion">
-            <p>
-              {proyectosFiltrados[proyectoSeleccionado].descripcion}
-            </p>
+            <p>{proyectosFiltrados[proyectoSeleccionado].descripcion}</p>
           </div>
         </div>
 
