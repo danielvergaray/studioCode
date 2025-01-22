@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React  from "react";
+import { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { IoIosArrowDown } from "react-icons/io";
+import InfoContext from "../infoContext/InfoContext";
+
+
 
 const DropdownMaker = () => {
-  const [idioma, setIdioma] = useState("ESP");
+  /*  const [idioma, setIdioma] = useState("ESP");
 
   const cambiarIdioma = (idioma) => {
     setIdioma(idioma);
-  };
+  }; */
+
+
+  const { idioma, cambiarIdioma } = useContext(InfoContext);
 
   return (
     <Dropdown>
@@ -17,9 +24,13 @@ const DropdownMaker = () => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item onClick={()=>cambiarIdioma("ESP")}>ESPAÑOL</Dropdown.Item>
+        <Dropdown.Item onClick={() => cambiarIdioma("ESP")}>
+          ESPAÑOL
+        </Dropdown.Item>
         <span></span>
-        <Dropdown.Item onClick={()=>cambiarIdioma("ING")}>INGLÉS</Dropdown.Item>
+        <Dropdown.Item onClick={() => cambiarIdioma("ENG")}>
+          ENGLISH
+        </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
   );

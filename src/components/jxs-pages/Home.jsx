@@ -6,9 +6,13 @@ import DropdownMaker from "../Dropdown/DropdownMaker";
 const Home = () => {
   const { infoHomeArray } = useContext(InfoContext);
 
+  //const arraySegunIdioma = idioma === "ENG" ? infoHomeArray_ingles : infoHomeArray;
+
   return (
     <section className="home_desktop">
-      {infoHomeArray.map((info, index) => (
+      {
+      
+      infoHomeArray.map((info, index) => (
         <div key={index}>
           <div className="home_desktop-navbar">
             <div className="home_desktop-navbar-logo">

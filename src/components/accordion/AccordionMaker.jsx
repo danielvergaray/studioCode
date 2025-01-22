@@ -27,7 +27,7 @@ const AccordionMaker = () => {
     <Accordion className="acordion-externo" activeKey={activeKey} flush>
       {infoServiciosArray.map((servicio, index) => (
         <>
-          <Accordion.Item
+          <Accordion.Item 
             eventKey={servicio.item}
             key={index}
             onClick={() => handleToggle(servicio.item)}

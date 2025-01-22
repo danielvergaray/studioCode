@@ -4,7 +4,7 @@ import InfoContext from "../infoContext/InfoContext";
 import { FiArrowRight } from "react-icons/fi";
 
 const Footer = () => {
-  const { infoHomeArray } = useContext(InfoContext);
+  const { infoHomeArray, infoFooterArray } = useContext(InfoContext);
 
   return (
     <section className="footer">
@@ -14,21 +14,25 @@ const Footer = () => {
         </div>
       ))}
 
-      <div className="footer-pretitulo">
-        <p>CONTÁCTANOS</p>
-      </div>
-      <div className="footer-titulo">
-        <p>Hablemos de nuestro próximo proyecto juntos</p>
-      </div>
-      <div className="footer-boton">
-        <div className="footer-boton-texto">
-          <p>ENVÍANOS UN MENSAJE</p>
-        </div>
+      {infoFooterArray.map((info, index) => (
+        <>
+          <div className="footer-pretitulo">
+            <p>{info.pretitulo}</p>
+          </div>
+          <div className="footer-titulo">
+            <p>{info.titulo}</p>
+          </div>
+          <div className="footer-boton">
+            <div className="footer-boton-texto">
+              <p>{info.mensaje}</p>
+            </div>
 
-        <div className="footer-boton-flecha">
-          <FiArrowRight />
-        </div>
-      </div>
+            <div className="footer-boton-flecha">
+              <FiArrowRight />
+            </div>
+          </div>
+        </>
+      ))}
     </section>
   );
 };

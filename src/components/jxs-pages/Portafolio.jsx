@@ -10,6 +10,7 @@ const Portafolio = () => {
     colores,
     proyectoSeleccionado,
     funcionSeleccionarProyecto,
+    idioma
   } = useContext(InfoContext);
 
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("todos");
@@ -115,7 +116,7 @@ const Portafolio = () => {
       ))}
 
       <section className="portafolio-proyectos">
-        {categoriaSeleccionada === "todos"
+        {categoriaSeleccionada === "todos" || categoriaSeleccionada === "all"
           ? infoPortafolioProyectoArray
               .slice(0, cantProyectos)
               .map((proyecto, index) => (
@@ -144,7 +145,10 @@ const Portafolio = () => {
 
       {verMas && proyectosFiltrados.length > 6 && (
         <section className="portafolio-proyectos-btn-verMas">
-          <button onClick={verMasProyectos}>ver más</button>
+          { idioma === "ENG" ?
+            (<button onClick={verMasProyectos}>See more projects</button>)
+          : (<button onClick={verMasProyectos}>ver más</button>)
+          }
         </section>
       )}
 

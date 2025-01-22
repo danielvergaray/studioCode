@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import InfoContext from "./InfoContext";
 import home_fondo from "../../assets/imagenes/home/home_fondo.jpg";
 import navBar_nombreEmpresa from "../../assets/imagenes/navbar/nombreEmpresa.png";
@@ -29,7 +29,7 @@ import nuna2 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_02.jpg";
 import nuna3 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_03.jpg";
 import nuna4 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_04.jpg";
 import nuna5 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_05.jpg";
-import servicios_branding_foto from "../../assets/imagenes/servicios/servicios_branding.jpeg"
+import servicios_branding_foto from "../../assets/imagenes/servicios/servicios_branding.jpeg";
 
 const InfoContextProvider = ({ children }) => {
   const informacion = [
@@ -180,7 +180,6 @@ const InfoContextProvider = ({ children }) => {
             {
               imagenes: cumpleañosSebas3,
             },
-          
           ],
         },
         {
@@ -201,7 +200,6 @@ const InfoContextProvider = ({ children }) => {
             {
               imagenes: cumpleañosSebas3,
             },
-         
           ],
         },
         {
@@ -219,20 +217,18 @@ const InfoContextProvider = ({ children }) => {
             {
               imagenes: CYN2,
             },
-            
+
             {
               imagenes: CYN3,
             },
-            
+
             {
               imagenes: CYN4,
             },
-            
+
             {
               imagenes: CYN5,
             },
-            
-            
           ],
         },
         {
@@ -282,7 +278,6 @@ const InfoContextProvider = ({ children }) => {
             {
               imagenes: guiaEntel4,
             },
-             
           ],
         },
         {
@@ -309,9 +304,15 @@ const InfoContextProvider = ({ children }) => {
             {
               imagenes: nuna5,
             },
-             
           ],
         },
+      ],
+      footer: [
+        {
+          pretitulo: "CONTÁCTANOS",
+          titulo: "Hablemos de nuestro próximo proyecto juntos",
+          mensaje: "ENVÍANOS UN MENSAJE",
+        }
       ],
       colores: [
         {
@@ -326,33 +327,367 @@ const InfoContextProvider = ({ children }) => {
     },
   ];
 
-   /* PARA ABRIR POPUP */
+  const informacion_ingles = [
+    {
+      home: [
+        {
+          home_fondo,
+          titulo: "hello, we are",
+          nombreEmpresa: "studioCode",
+          subtitulo: "web & design",
+          iconoEstrella,
+          navBar_nombreEmpresa,
+        },
+      ],
 
-   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
+      servicios: [
+        {
+          item: "1",
+          pretitulo: "What we do",
+          titulo: "web design",
+          icono_flecha: iconoFlecha,
+          icono_estrella: iconoEstrella,
+          servicios_branding_foto,
+          descripcion_servicios: [
+            {
+              titulo: "web page",
+              descripcion:
+                "We create functional, attractive websites tailored to the needs of your project to strengthen your brand's digital presence.",
+            },
+            {
+              titulo: "Landingpage",
+              descripcion:
+                "We develop simple, temporary websites, specifically designed for a specific purpose, and optimize them to ensure you achieve what you need. They are ideal for campaigns, reports and more.",
+            },
+            {
+              titulo: "DIGITAL INVITATION",
+              descripcion:
+                "We design interactive invitations with links, images and visual elements to tell our clients' story. These are the ideal choice for events such as weddings, parties, conferences and other celebrations.",
+            },
+          ],
+        },
+        {
+          item: "2",
+          pretitulo: "What we do",
+          titulo: "branding",
+          icono_flecha: iconoFlecha,
+          icono_estrella: iconoEstrella,
+          descripcion_servicios: [
+            {
+              titulo: "Logo",
+              descripcion:
+                "We will help you create a unique visual representation for your brand using text, symbols or images. We will design an easily recognizable identity that reflects your brand values ​​and personality.",
+            },
+            {
+              titulo: "Corporate identity",
+              descripcion:
+                "Give your brand a unique and coherent style, through visual elements that represent it. Together, we will discover the colors, fonts, graphic styles and custom pieces that best suit your needs.",
+            },
+            {
+              titulo: "Packaging",
+              descripcion:
+                "We will design your product packaging not only with a functional focus, but also to attract consumers, reflecting the identity and values ​​of your brand.",
+            },
+          ],
+        },
+        {
+          item: "3",
+          pretitulo: "What we do",
+          titulo: "editorial",
+          icono_flecha: iconoFlecha,
+          icono_estrella: iconoEstrella,
+          descripcion_servicios: [
+            {
+              titulo: "Brochures",
+              descripcion:
+                "We create graphic pieces, both printed and digital, such as brochures, leaflets and brochures, to convey the information you need in a visually striking and effective way.",
+            },
+            {
+              titulo: "Publications",
+              descripcion:
+                "We focus on the design and layout of printed and digital publications, such as magazines, guides and books, ensuring an attractive, professional and consistent visual presentation with the identity of your content.",
+            },
+            {
+              titulo: "Reports",
+              descripcion:
+                "Communicate your company's figures and progress clearly, using infographics, visual reports and data presentations, transforming results and achievements into easily understandable and attractive graphic elements.",
+            },
+          ],
+        },
+      ],
 
-   const funcionSeleccionarProyecto = (index) => {
-     setProyectoSeleccionado(index);
-     document.body.classList.add("popup-open");
-   };
+      portafolio: [
+        {
+          pretitulo: "Our projects",
+          titulo: "Check out what we've been creating",
+          menu: [
+            {
+              opcion: "all",
+            },
+            {
+              opcion: "webdesign",
+            },
+            {
+              opcion: "branding",
+            },
+            {
+              opcion: "editorial",
+            },
+          ],
+        },
+      ],
+      footer: [
+        {
+          pretitulo: "CONTACT US",
+          titulo: "Let's talk about our next project together",
+          mensaje: "SEND US A MESSAGE",
+        }
+      ],
+      proyectos_portafolio: [
+        {
+          id: 1,
+          categoria: "webdesign",
+          titulo: "digital wedding invitation",
+          cliente: "dani & pao",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          imagenRecuadro: bodaDaniPao1,
+          imagenes: [
+            {
+              imagenes: bodaDaniPao1,
+            },
+            {
+              imagenes: bodaDaniPao2,
+            },
+            {
+              imagenes: bodaDaniPao3,
+            },
+          ],
+        },
+        {
+          id: 2,
+          categoria: "webdesign",
+          titulo: "sebas digital invitation",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          imagenRecuadro: cumpleañosSebas1,
+          imagenes: [
+            {
+              imagenes: cumpleañosSebas1,
+            },
+            {
+              imagenes: cumpleañosSebas2,
+            },
+            {
+              imagenes: cumpleañosSebas3,
+            },
+          ],
+        },
+        {
+          id: 3,
+          categoria: "webdesign",
+          titulo: "sebas birthday",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          imagenRecuadro: cumpleañosSebas1,
+          imagenes: [
+            {
+              imagenes: cumpleañosSebas1,
+            },
+            {
+              imagenes: cumpleañosSebas2,
+            },
+            {
+              imagenes: cumpleañosSebas3,
+            },
+          ],
+        },
+        {
+          id: 4,
+          categoria: "branding",
+          titulo: "CYN",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          imagenRecuadro: CYN1,
+          imagenes: [
+            {
+              imagenes: CYN1,
+            },
+            {
+              imagenes: CYN2,
+            },
 
-   const cerrarPopup = () =>{
+            {
+              imagenes: CYN3,
+            },
+
+            {
+              imagenes: CYN4,
+            },
+
+            {
+              imagenes: CYN5,
+            },
+          ],
+        },
+        {
+          id: 5,
+          categoria: "branding",
+          titulo: "mondi",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium accusamus iure tempore dolorem voluptate, maiores ullam asperiores facere quis harum expedita voluptatem ad vero in a? Laboriosam nostrum qui perferendis facere id, ex eveniet illo deleniti, officia natus ducimus reiciendis.",
+          imagenRecuadro: mondi1,
+          imagenes: [
+            {
+              imagenes: mondi1,
+            },
+            {
+              imagenes: mondi2,
+            },
+            {
+              imagenes: mondi3,
+            },
+            {
+              imagenes: mondi4,
+            },
+            {
+              imagenes: mondi5,
+            },
+          ],
+        },
+        {
+          id: 6,
+          categoria: "editorial",
+          titulo: "entel guide",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          imagenRecuadro: guiaEntel1,
+          imagenes: [
+            {
+              imagenes: guiaEntel1,
+            },
+            {
+              imagenes: guiaEntel2,
+            },
+            {
+              imagenes: guiaEntel3,
+            },
+            {
+              imagenes: guiaEntel4,
+            },
+          ],
+        },
+        {
+          id: 7,
+          categoria: "branding",
+          titulo: "nuna",
+          cliente: "Cliente por definir",
+          descripcion:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+          imagenRecuadro: nuna1,
+          imagenes: [
+            {
+              imagenes: nuna1,
+            },
+            {
+              imagenes: nuna2,
+            },
+            {
+              imagenes: nuna3,
+            },
+            {
+              imagenes: nuna4,
+            },
+            {
+              imagenes: nuna5,
+            },
+          ],
+        },
+      ],
+    },
+  ];
+
+  const informacion_colores = [
+    {
+      colores: [
+        {
+          azul_rey: "#4559DE",
+          azul_oscuro: "#05192D",
+          naranja: "#FF6122",
+          blanco: "#FFFFFF",
+          gris_claro: "#EDEDED",
+          gris_oscuro: "#B3B3B3",
+        },
+      ],
+    },
+  ];
+
+  /* PARA ABRIR POPUP */
+
+  const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
+
+  const funcionSeleccionarProyecto = (index) => {
+    setProyectoSeleccionado(index);
+    document.body.classList.add("popup-open");
+  };
+
+  const cerrarPopup = () => {
     setProyectoSeleccionado(null);
     document.body.classList.remove("popup-open");
-   }
+  };
+
+  /* CAMBIO DE IDIOMA */
+
+  const [idioma, setIdioma] = useState("ESP");
+
+  const cambiarIdioma = (idioma) => {
+    setIdioma(idioma);
+  };
+
+  /*  const arraySegunIdioma =
+    idioma === "ENG" ? infoHomeArray_ingles : infoHomeArray; */
 
   const values = {
-    infoHomeArray: Object.values(informacion[0].home),
-    colores: informacion[0].colores[0], // Acceder al primer elemento directamente
-    infoServiciosArray: Object.values(informacion[0].servicios),
-    infoPortafolioArray: Object.values(informacion[0].portafolio),
-    infoPortafolioProyectoArray: Object.values(
-      informacion[0].proyectos_portafolio
+    //infoHomeArray: Object.values(informacion[0].home),
+    infoHomeArray: Object.values(
+      idioma === "ENG" ? informacion_ingles[0].home : informacion[0].home
     ),
+    //infoHomeArray_ingles: Object.values(informacion_ingles[0].home),
+    colores: informacion_colores[0].colores[0], // Acceder al primer elemento directamente
+    infoServiciosArray: Object.values(
+      idioma === "ENG"
+        ? informacion_ingles[0].servicios
+        : informacion[0].servicios
+    ),
+    infoPortafolioArray: Object.values(
+      idioma === "ENG"
+        ? informacion_ingles[0].portafolio
+        : informacion[0].portafolio
+    ),
+    infoPortafolioProyectoArray: Object.values(
+      idioma === "ENG"
+        ? informacion_ingles[0].proyectos_portafolio
+        : informacion[0].proyectos_portafolio
+    ),
+    infoFooterArray: Object.values(
+      idioma === "ENG"
+        ? informacion_ingles[0].footer
+        : informacion[0].footer
+    ),
+    
+    //infoColoresArray: Object.values (informacion_colores[0].colores),
     proyectoSeleccionado,
     setProyectoSeleccionado,
     funcionSeleccionarProyecto,
-    cerrarPopup
-
+    cerrarPopup,
+    idioma,
+    setIdioma,
+    cambiarIdioma,
   };
 
   return <InfoContext.Provider value={values}>{children}</InfoContext.Provider>;

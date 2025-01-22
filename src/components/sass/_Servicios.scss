@@ -7,10 +7,10 @@
       display: flex; // Alinea los ítems en fila
       flex-direction: row; // Coloca los elementos lado a lado
       height: 615px;
+      
       .accordion-item {
         display: flex;
         flex-direction: row-reverse; // Mantiene header y body apilados dentro de cada ítem
-
         justify-content: center;
         .accordion-header {
           writing-mode: vertical-rl; // Hace que el texto se lea de abajo hacia arriba
@@ -19,7 +19,7 @@
           ); // Corrige la orientación del texto para que sea legible
           text-align: center; // Alinea el texto verticalmente en el header
           cursor: pointer; // Asegura que sea clickeable
-
+       
           .accordion-button {
             background-color: transparent;
             color: white;
@@ -64,7 +64,7 @@
         padding: 50px;
         display: flex;
         justify-content: left;
-
+        transition: height 5s ease !important;
         .accordion-body {
           padding: 0;
           width: 100%;
