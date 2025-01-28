@@ -28,6 +28,12 @@ const Home = () => {
             <p>{info.nombreEmpresa}</p>
           </div>
 
+          <div className="home_mobile-title" key={index}>
+            <p>{info.titulo}</p>
+            <p>{info.nombreEmpresaMobile}</p>
+            <p>{info.nombreEmpresaMobile2}</p>
+          </div>
+
           <div className="home_desktop-icon">
             <img src={info.iconoEstrella} alt="icono-estrella" />
           </div>
