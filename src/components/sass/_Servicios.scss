@@ -3,11 +3,23 @@
 
 @media (min-width: 847px) {
   .home_desktop-servicios {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 500px;
+    .home_desktop-servicios-imagen {
+      height: 500px;
+      grid-column: 1;
+    
+      img {
+        width: 100%;
+        
+      }
+    }
+
     .acordion-externo {
       display: flex; // Alinea los ítems en fila
       flex-direction: row; // Coloca los elementos lado a lado
-      height: 615px;
-      
+
       .accordion-item {
         display: flex;
         flex-direction: row-reverse; // Mantiene header y body apilados dentro de cada ítem
@@ -19,18 +31,22 @@
           ); // Corrige la orientación del texto para que sea legible
           text-align: center; // Alinea el texto verticalmente en el header
           cursor: pointer; // Asegura que sea clickeable
-       
+
           .accordion-button {
             background-color: transparent;
             color: white;
             font-size: 50px;
             text-transform: uppercase;
             margin: 0 auto;
-            height: 430px;
+            height: 400px;
             font-size: 40px;
             font-family: "Unbounded-Extralight";
             padding: 30px;
             padding-top: 40px;
+             &:focus{ /* Quita efecto de bordes cuando se hace click */
+              outline: none;
+              box-shadow: none;
+             }
           }
           .accordion-button::after {
             display: none; /* Oculta la flecha */
@@ -61,10 +77,10 @@
       }
       .item-activo {
         width: 100%;
-        padding: 50px;
+        padding: 40px;
         display: flex;
         justify-content: left;
-        transition: height 5s ease !important;
+
         .accordion-body {
           padding: 0;
           width: 100%;
@@ -85,7 +101,7 @@
             color: $blanco;
             display: grid;
             grid-template-columns: 90% 10%;
-            width: 80%;
+            width: 100%;
 
             .home_desktop-servicios-p {
               line-height: 0.9;
@@ -110,20 +126,6 @@
             background-color: white; // Define el color blanco para la línea
             width: 92%;
           }
-        }
-        /* PARA PODER DIVIDIR Y COLOCAR LA IMAGEN */
-        .cuerpo_acordion {
-          display: grid;
-          grid-template-columns: 60% 40%;
-
-          .prueba{
-            img {
-              width: 100%;
-              max-height: 498px;
-            }
-          }
-
-          
         }
       }
     }
@@ -192,7 +194,7 @@
         }
       }
       .servicios-abierto {
-        width: 45%;
+        width: 80%;
         p {
           font-size: 0.8rem;
           padding-bottom: 20px;

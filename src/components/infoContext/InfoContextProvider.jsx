@@ -29,7 +29,9 @@ import nuna2 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_02.jpg";
 import nuna3 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_03.jpg";
 import nuna4 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_04.jpg";
 import nuna5 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_05.jpg";
-import servicios_branding_foto from "../../assets/imagenes/servicios/servicios_branding.jpeg";
+import servicios_branding_foto from "../../assets/imagenes/servicios/servicios_branding.jpg";
+import servicios_webdesign_foto from "../../assets/imagenes/servicios/servicios_webdesign.jpeg";
+import servicios_editorial_foto from "../../assets/imagenes/servicios/servicios_editorial.png";
 
 const InfoContextProvider = ({ children }) => {
   const informacion = [
@@ -52,7 +54,6 @@ const InfoContextProvider = ({ children }) => {
           titulo: "web design",
           icono_flecha: iconoFlecha,
           icono_estrella: iconoEstrella,
-          servicios_branding_foto,
           descripcion_servicios: [
             {
               titulo: "web page",
@@ -312,7 +313,7 @@ const InfoContextProvider = ({ children }) => {
           pretitulo: "CONTÁCTANOS",
           titulo: "Hablemos de nuestro próximo proyecto juntos",
           mensaje: "ENVÍANOS UN MENSAJE",
-        }
+        },
       ],
       colores: [
         {
@@ -324,6 +325,13 @@ const InfoContextProvider = ({ children }) => {
           gris_oscuro: "#B3B3B3",
         },
       ],
+      imagenes_servicio_acordion:[
+        {
+          servicios_branding_foto,
+          servicios_webdesign_foto,
+          servicios_editorial_foto,
+        }
+      ]
     },
   ];
 
@@ -441,7 +449,7 @@ const InfoContextProvider = ({ children }) => {
           pretitulo: "CONTACT US",
           titulo: "Let's talk about our next project together",
           mensaje: "SEND US A MESSAGE",
-        }
+        },
       ],
       proyectos_portafolio: [
         {
@@ -609,6 +617,13 @@ const InfoContextProvider = ({ children }) => {
           ],
         },
       ],
+      imagenes_servicio_acordion:[
+        {
+          servicios_branding_foto,
+          servicios_webdesign_foto,
+          servicios_editorial_foto,
+        }
+      ],
     },
   ];
 
@@ -652,6 +667,11 @@ const InfoContextProvider = ({ children }) => {
   /*  const arraySegunIdioma =
     idioma === "ENG" ? infoHomeArray_ingles : infoHomeArray; */
 
+    /* PARA MOSTRAR IMAGEN AL LADO DEL ACORDION */
+
+  const [accordionAbierto, setAccordionAbierto] = useState("1");
+
+
   const values = {
     //infoHomeArray: Object.values(informacion[0].home),
     infoHomeArray: Object.values(
@@ -664,6 +684,14 @@ const InfoContextProvider = ({ children }) => {
         ? informacion_ingles[0].servicios
         : informacion[0].servicios
     ),
+
+    infoServiciosAcordionArray: Object.values(
+      idioma === "ENG"
+        ? informacion_ingles[0].imagenes_servicio_acordion
+        : informacion[0].imagenes_servicio_acordion
+    ),
+
+
     infoPortafolioArray: Object.values(
       idioma === "ENG"
         ? informacion_ingles[0].portafolio
@@ -675,11 +703,13 @@ const InfoContextProvider = ({ children }) => {
         : informacion[0].proyectos_portafolio
     ),
     infoFooterArray: Object.values(
-      idioma === "ENG"
-        ? informacion_ingles[0].footer
-        : informacion[0].footer
+      idioma === "ENG" ? informacion_ingles[0].footer : informacion[0].footer
     ),
+
+
+
     
+
     //infoColoresArray: Object.values (informacion_colores[0].colores),
     proyectoSeleccionado,
     setProyectoSeleccionado,
@@ -688,6 +718,8 @@ const InfoContextProvider = ({ children }) => {
     idioma,
     setIdioma,
     cambiarIdioma,
+    accordionAbierto, 
+    setAccordionAbierto
   };
 
   return <InfoContext.Provider value={values}>{children}</InfoContext.Provider>;

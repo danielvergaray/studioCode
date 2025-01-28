@@ -7,27 +7,30 @@ import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
 const AccordionMaker = () => {
   const [activeKey, setActiveKey] = useState("1"); // Inicialmente abierto el item con eventKey "0"
 
+  const { infoServiciosArray, colores, setAccordionAbierto } =
+    useContext(InfoContext);
+
+  const [mostrarInfo, setMostrarInfo] = useState(0);
+
   const handleToggle = (key) => {
     /* acordeon externo */
     if (key !== activeKey) {
       // Solo cambia el activo si el nuevo key es diferente al actual
       setActiveKey(key);
     }
+    setAccordionAbierto(key)
   };
 
-  const { infoServiciosArray, colores } = useContext(InfoContext);
-
-  const [mostrarInfo, setMostrarInfo] = useState(null);
-
   const toggleInfo = (index) => {
-    setMostrarInfo((prevState) => (prevState === index ? null : index)); // Alternar índice activo
+    setMostrarInfo((prevState) => (prevState === index ? 0 : index)); // Alternar índice activo
+  console.log(index)
   };
 
   return (
     <Accordion className="acordion-externo" activeKey={activeKey} flush>
       {infoServiciosArray.map((servicio, index) => (
         <>
-          <Accordion.Item 
+          <Accordion.Item
             eventKey={servicio.item}
             key={index}
             onClick={() => handleToggle(servicio.item)}
@@ -40,19 +43,20 @@ const AccordionMaker = () => {
                 : { backgroundColor: `${colores.naranja}` }
             }
           >
-              <Accordion.Header
-                className={activeKey === servicio.item ? "oculto" : ""}
-              >
-                {servicio.titulo}
-                <span className="accordion-icon">
-                  <img src={servicio.icono_flecha} alt="icono-flecha" />
-                </span>
-              </Accordion.Header>
-              <Accordion.Body
-                className={activeKey === servicio.item ? "cuerpo_acordion" : "oculto"}
-              >
-
-                <section>
+            <Accordion.Header
+              className={activeKey === servicio.item ? "oculto" : ""}
+            >
+              <p>{servicio.titulo}</p>
+              <span className="accordion-icon">
+                <img src={servicio.icono_flecha} alt="icono-flecha" />
+              </span>
+            </Accordion.Header>
+            <Accordion.Body
+              className={
+                activeKey === servicio.item ? "cuerpo_acordion" : "oculto"
+              }
+            >
+              <section>
                 <div className="home_desktop-servicios-pretitulo">
                   <p>{servicio.pretitulo}</p>
                 </div>
@@ -94,15 +98,12 @@ const AccordionMaker = () => {
                     )
                   )}
                 </>
+              </section>
 
-                </section>
-
-                <section className="prueba">
+              {/*  <section className="prueba">
                   <img src={servicio.servicios_branding_foto} alt="" />
-                </section>
-                
-              </Accordion.Body>
-              
+                </section> */}
+            </Accordion.Body>
           </Accordion.Item>
         </>
       ))}
