@@ -1,5 +1,70 @@
 @import "./reutilizables/colors";
 
+@media (max-width: 576px){
+  .footer {
+    padding: 20px;
+    background-color: $azul-oscuro;
+    color: $blanco;
+
+    .footer-icon {
+      margin: auto;
+      padding-bottom: 20px;
+      img{
+        width: 40px; /* QUeda de este tamaño */
+      }
+    }
+    .footer-pretitulo {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .footer-titulo {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      width: 70%;
+      line-height: 1.2;
+      font-family: "Unbounded-light";
+
+      p {
+        margin: 0;
+        padding-bottom: 20px;
+      }
+    }
+    .footer-boton {
+      padding: 8px;
+      border: 1px solid $blanco;
+      display: grid;
+      grid-template-columns: 90% 10%;
+      cursor: pointer;
+
+      .footer-boton-texto {
+        grid-column: 1;
+        margin: auto 0;
+        p {
+          margin: auto;
+          font-family: "Unbounded-ExtraLight";
+          font-size: 0.6rem;
+        }
+      }
+      .footer-boton-flecha {
+        grid-column: 2;
+        display: flex;
+        justify-content: right;
+        padding-right: 5px;
+        svg {
+          scale: 1.5;
+          stroke-width: 1;
+          margin: auto;
+        }
+      }
+
+      
+    }
+  }
+
+
+
+}
+
 @media (min-width: 847px) {
   .footer {
     padding: 100px;
@@ -19,7 +84,7 @@
     .footer-titulo {
       font-size: 2.5rem;
       text-transform: uppercase;
-      width: 50%;
+      width: 80%;
       line-height: 1.2;
       font-family: "Unbounded-light";
 
@@ -50,8 +115,9 @@
       }
       .footer-boton-flecha {
         grid-column: 2;
-        text-align: right;
         padding-right: 5px;
+        display: flex;
+        justify-content: right;
         svg {
           scale: 2.5;
           stroke-width: 1;

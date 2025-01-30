@@ -71,7 +71,7 @@ const AccordionMaker = () => {
                   <span></span>
                   {servicio.descripcion_servicios.map(
                     (descripcionServicio, index) => (
-                      <section className="servicios">
+                      <section className="servicios" key={index}>
                         <div className="servicios-cerrado">
                           <h2>{descripcionServicio.titulo}</h2>
                           <div

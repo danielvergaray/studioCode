@@ -10,7 +10,7 @@ const Portafolio = () => {
     colores,
     proyectoSeleccionado,
     funcionSeleccionarProyecto,
-    idioma
+    idioma,
   } = useContext(InfoContext);
 
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState("todos");
@@ -45,9 +45,11 @@ const Portafolio = () => {
   /* BOTON VER MAS */
 
   const [cantProyectos, setCantProyectos] = useState(6); //Para mostrar solamente 6 productos
+  const [cantProyectosMobile, setCantProyectosMobile] = useState(3);
 
   const verMasProyectos = () => {
     setCantProyectos(cantProyectos + 6);
+    setCantProyectosMobile(cantProyectos + 3);
     setVerMas(!verMas);
   };
 
@@ -112,6 +114,57 @@ const Portafolio = () => {
               </div>
             ))}
           </section>
+
+          <section className="portafolio-menu-mobile">
+            {info.menu.map((opcion, menuIndex) => (
+              <div key={menuIndex}>
+                <NavLink
+                  onMouseEnter={() => handleMouseEnter(menuIndex)}
+                  onMouseLeave={() => handleMouseLeave(menuIndex)}
+                  onClick={() => seleccionarCategoria(opcion.opcion)}
+                  style={{
+                    backgroundColor:
+                      opcion.opcion === categoriaSeleccionada
+                        ? "transparent" // Fondo transparente para estado activo o hover
+                        : menuIndex === 0
+                        ? colores.gris_oscuro
+                        : menuIndex === 1
+                        ? colores.azul_rey
+                        : menuIndex === 2
+                        ? colores.azul_oscuro
+                        : menuIndex === 3
+                        ? colores.naranja
+                        : "transparent", // Fondo definido para estado inactivo
+                    color:
+                      opcion.opcion === categoriaSeleccionada
+                        ? menuIndex === 0
+                          ? colores.gris_oscuro
+                          : menuIndex === 1
+                          ? colores.azul_rey
+                          : menuIndex === 2
+                          ? colores.azul_oscuro
+                          : menuIndex === 3
+                          ? colores.naranja
+                          : colores.blanco // Color de texto correspondiente al fondo inactivo
+                        : colores.blanco, // Texto blanco en estado inactivo
+                    border: `1px solid`,
+                    borderColor:
+                      menuIndex === 0
+                        ? colores.gris_oscuro
+                        : menuIndex === 1
+                        ? colores.azul_rey
+                        : menuIndex === 2
+                        ? colores.azul_oscuro
+                        : menuIndex === 3
+                        ? colores.naranja
+                        : null,
+                  }}
+                >
+                  {opcion.opcion}
+                </NavLink>
+              </div>
+            ))}
+          </section>
         </div>
       ))}
 
@@ -125,7 +178,35 @@ const Portafolio = () => {
                   className="portafolio-proyectos-item"
                   onClick={() => funcionSeleccionarProyecto(index)}
                 >
+                  <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
+                </div>
+              ))
+          : infoPortafolioProyectoArray
+              .filter(
+                (proyecto) => proyecto.categoria === categoriaSeleccionada
+              ) // Filtrar por categoría
+              .map((proyecto, index) => (
+                <div
+                  key={index}
+                  className="portafolio-proyectos-item"
+                  onClick={() => funcionSeleccionarProyecto(index)}
+                >
                   <img src={proyecto.imagenRecuadro} alt="" />
+                </div>
+              ))}
+      </section>
+
+      <section className="portafolio-proyectos-mobile">
+        {categoriaSeleccionada === "todos" || categoriaSeleccionada === "all"
+          ? infoPortafolioProyectoArray
+              .slice(0, cantProyectosMobile)
+              .map((proyecto, index) => (
+                <div
+                  key={index}
+                  className="portafolio-proyectos-item"
+                  onClick={() => funcionSeleccionarProyecto(index)}
+                >
+                  <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
                 </div>
               ))
           : infoPortafolioProyectoArray
@@ -145,10 +226,11 @@ const Portafolio = () => {
 
       {verMas && proyectosFiltrados.length > 6 && (
         <section className="portafolio-proyectos-btn-verMas">
-          { idioma === "ENG" ?
-            (<button onClick={verMasProyectos}>See more projects</button>)
-          : (<button onClick={verMasProyectos}>ver más</button>)
-          }
+          {idioma === "ENG" ? (
+            <button onClick={verMasProyectos}>See more projects</button>
+          ) : (
+            <button onClick={verMasProyectos}>ver más</button>
+          )}
         </section>
       )}
 

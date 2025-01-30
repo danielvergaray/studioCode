@@ -15,7 +15,7 @@ const Footer = () => {
       ))}
 
       {infoFooterArray.map((info, index) => (
-        <>
+        <div key={index}>
           <div className="footer-pretitulo">
             <p>{info.pretitulo}</p>
           </div>
@@ -31,7 +31,7 @@ const Footer = () => {
               <FiArrowRight />
             </div>
           </div>
-        </>
+        </div>
       ))}
     </section>
   );

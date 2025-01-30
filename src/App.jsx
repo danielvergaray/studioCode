@@ -10,7 +10,7 @@ import Footer from './components/jxs-pages/Footer';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>

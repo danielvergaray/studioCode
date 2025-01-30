@@ -23,12 +23,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="home_desktop-title" key={index}>
+          <div className="home_desktop-title" >
             <p>{info.titulo}</p>
             <p>{info.nombreEmpresa}</p>
           </div>
 
-          <div className="home_mobile-title" key={index}>
+          <div className="home_mobile-title">
             <p>{info.titulo}</p>
             <p>{info.nombreEmpresaMobile}</p>
             <p>{info.nombreEmpresaMobile2}</p>
