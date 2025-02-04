@@ -1,6 +1,17 @@
 @use "./reutilizables/tipografias";
 @import "./reutilizables/colors";
 
+
+
+@media (max-width: 576px){
+  .home_desktop-servicios{
+    
+  }
+}
+
+
+
+
 @media (min-width: 847px) {
   .home_desktop-servicios {
     display: grid;
@@ -108,8 +119,9 @@
               text-transform: uppercase;
               padding-top: 10px;
               grid-column: 1;
+              padding-bottom: 10px;
             }
-            .home_desktop-servicios-titulo-estrella {
+           /*  .home_desktop-servicios-titulo-estrella {
               grid-column: 2;
               position: relative;
               left: 30%;
@@ -118,7 +130,7 @@
               img {
                 width: 50px;
               }
-            }
+            } */
           }
           span {
             display: block; // Asegura que el `span` actúe como una línea separadora
@@ -182,13 +194,34 @@
           justify-content: left;
           position: relative;
           left: -15%;
+          
 
-          i {
-            color: white;
-            font-size: 1.5rem;
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: auto 0;
+            width: 25px; // Tamaño del círculo
+            height: 25px;
+            background-color: transparent; // Fondo del círculo inactivo
+            border-radius: 50%; // Hace el contenedor circular
+            transition: background-color 0.1s ease; // Transición suave para hover
+            cursor: pointer;
+            border: 1px solid $blanco;
+          
+            &:hover {
+              background-color: $blanco;
+              border: none;
+          
+              svg {
+                fill: $azul-oscuro; // Aplica color blanco al ícono
+              }
+            }
+          
             svg {
-              margin-bottom: 5px;
+              scale: 1.1; // Escala del ícono
+              fill: $blanco; // Color por defecto del ícono
+              transition: fill 0.1s ease; // Transición suave para el cambio de color
             }
           }
         }

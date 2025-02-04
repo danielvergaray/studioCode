@@ -18,7 +18,7 @@ const CarouselMaker = ({
   return (
     <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
       {arrayImagenes.map((imagen) => (
-        <Carousel.Item>
+        <Carousel.Item interval={1500}>
           <img src={imagen.imagenes} alt={imagen.titulo} />
         </Carousel.Item>
       ))}

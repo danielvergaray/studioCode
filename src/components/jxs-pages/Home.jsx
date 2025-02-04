@@ -10,20 +10,27 @@ const Home = () => {
 
   return (
     <section className="home_desktop">
-      {
-      
-      infoHomeArray.map((info, index) => (
+      {infoHomeArray.map((info, index) => (
         <div key={index}>
           <div className="home_desktop-navbar">
             <div className="home_desktop-navbar-logo">
               <img src={info.navBar_nombreEmpresa} alt="logo-studioCode" />
             </div>
             <div className="home_desktop-navbar-idioma">
-              <DropdownMaker/>
+              <DropdownMaker primerIdioma="ESPAÑOL" segundoIdioma="ENGLISH" />
             </div>
           </div>
 
-          <div className="home_desktop-title" >
+          <div className="home_mobile-navbar">
+            <div className="home_mobile-navbar-idioma">
+              <DropdownMaker primerIdioma="ESP" segundoIdioma="ENG" />
+            </div>
+            <div className="home_mobile-navbar-logo">
+              <img src={info.navBar_nombreEmpresa} alt="logo-studioCode" />
+            </div>
+          </div>
+
+          <div className="home_desktop-title">
             <p>{info.titulo}</p>
             <p>{info.nombreEmpresa}</p>
           </div>

@@ -9,34 +9,89 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 110vh;
-    .home_desktop-navbar {
+
+    .home_mobile-navbar {
       width: 100%;
       display: flex;
       flex-direction: column;
       text-align: center;
-      padding-top: 50px;
-      .home_desktop-navbar-logo {
+      padding-top: 10px;
+      .home_mobile-navbar-logo {
+        padding-top: 10px;
         img {
-          width: 40%;
+          width: 45%;
         }
       }
-      .home_desktop-navbar-idioma {
+      .home_mobile-navbar-idioma {
         font-family: "Unbounded-regular";
-
-        button {
-          background-color: transparent;
-          border: none;
-
-          svg {
-            margin-left: 5px;
-            margin-bottom: 3px;
-            scale: 1.25;
+       
+      
+        .dropdown {
+          text-align: right;
+          .dropdown-menu {
+            background-color: $azul-rey;
+            border-radius: 0;
+            padding: 0px;
+            --bs-dropdown-min-width: 5rem;
+            margin-right: 8px;
+            clip-path: polygon(
+              83% 16%,
+              88% 0,
+              93% 16%,
+              100% 16%,
+              100% 100%,
+              0 100%,
+              0 17%
+            );
+            
+            a {
+              color: $blanco;
+              opacity: 0.5;
+              padding: 5px;
+              font-size: 10px;
+         
+              &:hover {
+                background-color: transparent;
+                color: $blanco;
+                opacity: 1;
+              }
+            }
+            :nth-child(1) {
+              margin-top: 12px;
+            }
+            :nth-child(2) {
+              padding-bottom: 0;
+            }
+  
+            span {
+              display: block; // Asegura que el `span` actúe como una línea separadora
+              height: 0.5px; // Define el grosor de la línea
+              background-color: $gris-oscuro; // Define el color blanco para la línea
+              width: 100%;
+            }
           }
-        }
-        .dropdown-toggle::after {
-          display: none; // Oculta la flecha por defecto
+          
+          
+          button {
+            background-color: transparent;
+            border: none;
+            font-size: 12px;
+            svg {
+              margin-left: 5px;
+              margin-bottom: 3px;
+              scale: 1.25;
+            }
+          }
+          .dropdown-toggle::after {
+            display: none; // Oculta la flecha por defecto
+          }
+
+          
         }
       }
+    }
+    .home_desktop-navbar {
+      display: none;
     }
 
     .home_mobile-title {
@@ -54,7 +109,7 @@
       p {
         color: white;
         text-align: center;
-        font-size: 40px;
+        font-size: 45px;
         margin: 0;
         font-family: "Unbounded-Extralight";
         text-transform: uppercase;
@@ -177,6 +232,9 @@
         }
       }
     }
+    .home_mobile-navbar {
+      display: none;
+    }
 
     .home_desktop-title {
       position: absolute;
@@ -189,11 +247,11 @@
       p {
         color: white;
         text-align: center;
-        font-size: 60px;
+        font-size: 80px;
         margin: 0;
         font-family: "Unbounded-Extralight";
         text-transform: uppercase;
-        height: 60px;
+        height: 80px;
       }
       p:nth-child(1) {
         margin-right: 5%;

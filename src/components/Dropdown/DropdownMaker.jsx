@@ -1,18 +1,15 @@
-import React  from "react";
+import React from "react";
 import { useContext } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import { IoIosArrowDown } from "react-icons/io";
 import InfoContext from "../infoContext/InfoContext";
 
-
-
-const DropdownMaker = () => {
+const DropdownMaker = ({primerIdioma, segundoIdioma}) => {
   /*  const [idioma, setIdioma] = useState("ESP");
 
   const cambiarIdioma = (idioma) => {
     setIdioma(idioma);
   }; */
-
 
   const { idioma, cambiarIdioma } = useContext(InfoContext);
 
@@ -24,12 +21,18 @@ const DropdownMaker = () => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item onClick={() => cambiarIdioma("ESP")}>
-          ESPAÑOL
+        <Dropdown.Item
+          onClick={() => cambiarIdioma("ESP")}
+          style={idioma === "ESP" ? { opacity: "1" } : null}
+        >
+          {primerIdioma}
         </Dropdown.Item>
         <span></span>
-        <Dropdown.Item onClick={() => cambiarIdioma("ENG")}>
-          ENGLISH
+        <Dropdown.Item
+          onClick={() => cambiarIdioma("ENG")}
+          style={idioma === "ENG" ? { opacity: "1" } : null}
+        >
+         {segundoIdioma}
         </Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>

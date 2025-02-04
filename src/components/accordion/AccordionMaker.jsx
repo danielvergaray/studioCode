@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { useContext } from "react";
 import InfoContext from "../infoContext/InfoContext";
-import { CiCirclePlus, CiCircleMinus } from "react-icons/ci";
+import { BiPlus, BiMinus } from "react-icons/bi";
 
 const AccordionMaker = () => {
   const [activeKey, setActiveKey] = useState("1"); // Inicialmente abierto el item con eventKey "0"
@@ -18,12 +18,12 @@ const AccordionMaker = () => {
       // Solo cambia el activo si el nuevo key es diferente al actual
       setActiveKey(key);
     }
-    setAccordionAbierto(key)
+    setAccordionAbierto(key);
   };
 
   const toggleInfo = (index) => {
     setMostrarInfo((prevState) => (prevState === index ? 0 : index)); // Alternar índice activo
-  console.log(index)
+    console.log(index);
   };
 
   return (
@@ -62,9 +62,9 @@ const AccordionMaker = () => {
                 </div>
                 <div className="home_desktop-servicios-titulo">
                   <p className="home_desktop-servicios-p">{servicio.titulo}</p>
-                  <div className="home_desktop-servicios-titulo-estrella">
+                  {/*     <div className="home_desktop-servicios-titulo-estrella">
                     <img src={servicio.icono_estrella} alt="" />
-                  </div>
+                  </div> */}
                 </div>
                 {/* Acordion interno */}
                 <>
@@ -79,13 +79,15 @@ const AccordionMaker = () => {
                             onClick={() => toggleInfo(index)}
                             style={{ cursor: "pointer" }}
                           >
-                            <i>
-                              {mostrarInfo === index ? (
-                                <CiCircleMinus />
-                              ) : (
-                                <CiCirclePlus />
-                              )}
-                            </i>
+                            {mostrarInfo === index ? (
+                              <div>
+                                <BiMinus />
+                              </div>
+                            ) : (
+                              <div>
+                                <BiPlus />
+                              </div>
+                            )}
                           </div>
                         </div>
                         {mostrarInfo === index && (
