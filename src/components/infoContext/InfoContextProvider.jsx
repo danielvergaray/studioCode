@@ -56,6 +56,7 @@ const InfoContextProvider = ({ children }) => {
           titulo: "web design",
           icono_flecha: iconoFlecha,
           icono_estrella: iconoEstrella,
+          imagen_servicio: servicios_webdesign_foto,
           descripcion_servicios: [
             {
               titulo: "web page",
@@ -80,6 +81,7 @@ const InfoContextProvider = ({ children }) => {
           titulo: "branding",
           icono_flecha: iconoFlecha,
           icono_estrella: iconoEstrella,
+          imagen_servicio: servicios_branding_foto,
           descripcion_servicios: [
             {
               titulo: "Logotipo",
@@ -104,6 +106,7 @@ const InfoContextProvider = ({ children }) => {
           titulo: "editorial",
           icono_flecha: iconoFlecha,
           icono_estrella: iconoEstrella,
+          imagen_servicio: servicios_editorial_foto,
           descripcion_servicios: [
             {
               titulo: "Brochures",

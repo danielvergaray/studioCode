@@ -4,7 +4,8 @@ import AccordionMaker from "../accordion/AccordionMaker";
 import InfoContext from "../infoContext/InfoContext";
 
 const Servicios = () => {
-  const { infoServiciosAcordionArray, accordionAbierto } = useContext(InfoContext);
+  const { infoServiciosAcordionArray, accordionAbierto } =
+    useContext(InfoContext);
 
   console.log(accordionAbierto);
 
@@ -16,12 +17,18 @@ const Servicios = () => {
       : infoServiciosAcordionArray[0].servicios_editorial_foto;
 
   return (
-    <section className="home_desktop-servicios">
-      <section className="home_desktop-servicios-imagen">
-        <img src={arrayServicio} alt="imagen_servicio" />
+    <>
+      <section className="home_desktop-servicios">
+        <section className="home_desktop-servicios-imagen">
+          <img src={arrayServicio} alt="imagen_servicio" />
+        </section>
+        <AccordionMaker />
       </section>
-      <AccordionMaker />
-    </section>
+
+      <section className="home_mobile-servicios">
+        <AccordionMaker />
+      </section>
+    </>
   );
 };
 

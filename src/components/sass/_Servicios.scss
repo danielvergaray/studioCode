@@ -1,18 +1,176 @@
 @use "./reutilizables/tipografias";
 @import "./reutilizables/colors";
 
+@media (max-width: 576px) {
+  .home_desktop-servicios {
+    display: none;
+  }
+  .home_mobile-servicios {
+    .acordion-externo-desktop {
+      display: none;
+    }
 
+    .acordion-externo-mobile {
+      height: 195vh; /* Se tuvo que hacer esto porque cada que se hacia click en una opcion del acordeon del mobile. habia un desplazamiento hacia abajo */
+      .accordion-item {
+        .accordion-header {
+          .accordion-button {
+            display: grid;
+            grid-column: 1;
+            grid-template-columns: 85% 15%;
+            background-color: transparent;
+            color: white;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-family: "Unbounded-Extralight";
+            padding: 20px;
 
-@media (max-width: 576px){
-  .home_desktop-servicios{
-    
+            p {
+              margin: 0;
+            }
+            .accordion-icon {
+              grid-column: 2;
+              transform: rotate(90deg);
+              margin: auto;
+              img {
+                padding-bottom: 0px;
+                width: 30px;
+              }
+            }
+          }
+          .accordion-button::after {
+            display: none; /* Oculta la flecha */
+          }
+        }
+
+        .accordion-collapse {
+          width: 100%;
+          .accordion-body {
+            flex: none;
+            //overflow: auto;
+            //padding: 1rem; // Ajusta los márgenes si es necesario
+          }
+        }
+      }
+      .item-activo {
+        width: 100%;
+        
+
+        .accordion-body {
+          padding: 0;
+         
+
+          .acordion-contenido {
+          padding: 50px 25px;
+            p {
+              margin: 0;
+              color: $blanco;
+            }
+            .home_mobile-servicios-pretitulo {
+              p {
+                font-family: "RedHatDisplay-Medium";
+                text-transform: uppercase;
+                font-size: 15px;
+              }
+            }
+            .home_mobile-servicios-titulo {
+              font-size: 30px;
+              font-family: "Unbounded-light";
+              color: $blanco;
+              display: grid;
+              grid-template-columns: 90% 10%;
+              width: 100%;
+
+              .home_mobile-servicios-p {
+                line-height: 0.9;
+                text-transform: uppercase;
+                padding-top: 10px;
+                grid-column: 1;
+                padding-bottom: 30px;
+              }
+            }
+            span {
+              display: block; // Asegura que el `span` actúe como una línea separadora
+              height: 0.5px; // Define el grosor de la línea
+              background-color: white; // Define el color blanco para la línea
+              width: 96%;
+            }
+
+            
+          }
+          .home_mobile-servicios-imagen {
+              width: 100%;
+              
+
+            }
+        }
+      }
+
+      .home_mobile-servicios-imagen {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .servicios {
+      width: 100%;
+
+      .servicios-cerrado {
+        display: grid;
+        grid-template-columns: 85% 15%;
+        padding: 10px 0;
+        h2 {
+          margin: 0;
+          font-size: 1.25rem;
+          padding: 10px 0;
+          color: white;
+          font-family: "Unbounded-light";
+          text-transform: lowercase;
+        }
+        .servicios-iconoAbrirCerrar {
+          margin: auto;
+
+          div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto 0;
+            width: 20px; // Tamaño del círculo
+            height: 20px;
+            background-color: transparent; // Fondo del círculo inactivo
+            border-radius: 50%; // Hace el contenedor circular
+            transition: background-color 0.1s ease; // Transición suave para hover
+            cursor: pointer;
+            border: 1px solid $blanco;
+
+            svg {
+              scale: 0.8; // Escala del ícono
+              fill: $blanco; // Color por defecto del ícono
+              transition: fill 0.1s ease; // Transición suave para el cambio de color
+            }
+          }
+        }
+      }
+      .servicios-abierto {
+        width: 80%;
+        p {
+          font-size: 0.8rem;
+          padding-bottom: 20px;
+          font-family: "RedHatDisplay-Light";
+        }
+      }
+    }
+  }
+  .oculto {
+    display: none;
   }
 }
 
-
-
-
 @media (min-width: 847px) {
+  .home_mobile-servicios {
+    display: none;
+  }
   .home_desktop-servicios {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -20,14 +178,16 @@
     .home_desktop-servicios-imagen {
       height: 500px;
       grid-column: 1;
-    
+
       img {
         width: 100%;
-        
       }
     }
+    .acordion-externo-mobile {
+      display: none;
+    }
 
-    .acordion-externo {
+    .acordion-externo-desktop {
       display: flex; // Alinea los ítems en fila
       flex-direction: row; // Coloca los elementos lado a lado
 
@@ -54,10 +214,11 @@
             font-family: "Unbounded-Extralight";
             padding: 30px;
             padding-top: 40px;
-             &:focus{ /* Quita efecto de bordes cuando se hace click */
+            &:focus {
+              /* Quita efecto de bordes cuando se hace click */
               outline: none;
               box-shadow: none;
-             }
+            }
           }
           .accordion-button::after {
             display: none; /* Oculta la flecha */
@@ -121,7 +282,7 @@
               grid-column: 1;
               padding-bottom: 10px;
             }
-           /*  .home_desktop-servicios-titulo-estrella {
+            /*  .home_desktop-servicios-titulo-estrella {
               grid-column: 2;
               position: relative;
               left: 30%;
@@ -194,7 +355,6 @@
           justify-content: left;
           position: relative;
           left: -15%;
-          
 
           div {
             display: flex;
@@ -208,16 +368,16 @@
             transition: background-color 0.1s ease; // Transición suave para hover
             cursor: pointer;
             border: 1px solid $blanco;
-          
+
             &:hover {
               background-color: $blanco;
               border: none;
-          
+
               svg {
                 fill: $azul-oscuro; // Aplica color blanco al ícono
               }
             }
-          
+
             svg {
               scale: 1.1; // Escala del ícono
               fill: $blanco; // Color por defecto del ícono
