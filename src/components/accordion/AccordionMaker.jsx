@@ -26,6 +26,24 @@ const AccordionMaker = () => {
     console.log(index);
   };
 
+  const scrollFunction = () => {
+    const scrollAmount= 500;
+    window.scrollTo({
+      top: scrollAmount,
+      behavior: "instant",
+    });
+  };
+
+  const handleToggleMobile = (key) => {
+    /* acordeon externo */
+    if (key !== activeKey) {
+      // Solo cambia el activo si el nuevo key es diferente al actual
+      setActiveKey(key);
+    }
+    setAccordionAbierto(key);
+    scrollFunction();
+  };
+
   return (
     <>
       <Accordion
@@ -119,13 +137,13 @@ const AccordionMaker = () => {
       </Accordion>
 
       <section className="acordion-externo-mobile">
-        <Accordion activeKey={activeKey} flush >
+        <Accordion activeKey={activeKey} flush>
           {infoServiciosArray.map((servicio, index) => (
             <>
               <Accordion.Item
                 eventKey={servicio.item}
                 key={index}
-                onClick={() => handleToggle(servicio.item)}
+                onClick={() => handleToggleMobile(servicio.item)}
                 className={activeKey === servicio.item ? "item-activo" : ""}
                 style={
                   index === 0
@@ -197,15 +215,10 @@ const AccordionMaker = () => {
                         )
                       )}
                     </>
-
-                    
                   </section>
                   <section className="home_mobile-servicios-imagen">
-                      <img
-                        src={servicio.imagen_servicio}
-                        alt={servicio.titulo}
-                      />
-                    </section>
+                    <img src={servicio.imagen_servicio} alt={servicio.titulo} />
+                  </section>
                 </Accordion.Body>
               </Accordion.Item>
             </>

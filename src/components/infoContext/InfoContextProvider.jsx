@@ -29,9 +29,9 @@ import nuna2 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_02.jpg";
 import nuna3 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_03.jpg";
 import nuna4 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_04.jpg";
 import nuna5 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_05.jpg";
-import servicios_branding_foto from "../../assets/imagenes/servicios/servicios_branding.jpg";
-import servicios_webdesign_foto from "../../assets/imagenes/servicios/servicios_webdesign.jpeg";
-import servicios_editorial_foto from "../../assets/imagenes/servicios/servicios_editorial.png";
+import servicios_branding_foto from "../../assets/imagenes/servicios/servicios_webdesig_500x500.jpeg";
+import servicios_webdesign_foto from "../../assets/imagenes/servicios/servicios_webdesig_500x500.jpeg";
+import servicios_editorial_foto from "../../assets/imagenes/servicios/servicios_webdesig_500x500.jpeg";
 
 const InfoContextProvider = ({ children }) => {
   const informacion = [

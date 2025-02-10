@@ -11,7 +11,7 @@
     }
 
     .acordion-externo-mobile {
-      height: 195vh; /* Se tuvo que hacer esto porque cada que se hacia click en una opcion del acordeon del mobile. habia un desplazamiento hacia abajo */
+      //height: 1100px; /* Se tuvo que hacer esto porque cada que se hacia click en una opcion del acordeon del mobile. habia un desplazamiento hacia abajo */
       .accordion-item {
         .accordion-header {
           .accordion-button {
@@ -175,12 +175,15 @@
     display: grid;
     grid-template-columns: 40% 60%;
     height: 500px;
+
     .home_desktop-servicios-imagen {
-      height: 500px;
+      //height: 500px;
       grid-column: 1;
 
       img {
         width: 100%;
+        height: 100%;
+        
       }
     }
     .acordion-externo-mobile {
