@@ -29,9 +29,9 @@ import nuna2 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_02.jpg";
 import nuna3 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_03.jpg";
 import nuna4 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_04.jpg";
 import nuna5 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_05.jpg";
-import servicios_branding_foto from "../../assets/imagenes/servicios/servicios_webdesig_500x500.jpeg";
-import servicios_webdesign_foto from "../../assets/imagenes/servicios/servicios_webdesig_500x500.jpeg";
-import servicios_editorial_foto from "../../assets/imagenes/servicios/servicios_webdesig_500x500.jpeg";
+import servicios_branding_foto from "../../assets/imagenes/servicios/BRANDING_small.jpg";
+import servicios_webdesign_foto from "../../assets/imagenes/servicios/WEBDESIGN_small.jpg";
+import servicios_editorial_foto from "../../assets/imagenes/servicios/EDITORIAL_small.jpg";
 
 const InfoContextProvider = ({ children }) => {
   const informacion = [
@@ -154,7 +154,7 @@ const InfoContextProvider = ({ children }) => {
           titulo: "invitación digital para boda",
           cliente: "dani & pao",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "Este proyecto fue creado con un enfoque único y personal, pensado especialmente para Dani y Pao. A través de un diseño visual adaptado a sus gustos y personalidad, logramos contar su historia de una forma auténtica y significativa. La disposición interactiva de la información no solo hace la invitación práctica, sino que también la convierte en una experiencia memorable. Una manera moderna y creativa de invitar a sus seres queridos a ser parte de un día tan especial.",
           imagenRecuadro: bodaDaniPao1,
           imagenes: [
             {
@@ -171,10 +171,10 @@ const InfoContextProvider = ({ children }) => {
         {
           id: 2,
           categoria: "webdesign",
-          titulo: "invitación digital sebas",
+          titulo: "Invitación digital de cumpleaños",
           cliente: "Cliente por definir",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "Creamos esta invitación digital para el cumpleaños de Sebas, inspirada en la épica temática de Star Wars. Con un diseño simple y elegante, logramos un estilo moderno que se adapta perfectamente a esta ocasión especial. Cada detalle ha sido pensado para transportar a los invitados a este fascinante universo, haciendo de esta invitación una experiencia increíble. ¡Que la Fuerza esté con todos en este día tan especial!",
           imagenRecuadro: cumpleañosSebas1,
           imagenes: [
             {
@@ -211,10 +211,10 @@ const InfoContextProvider = ({ children }) => {
         {
           id: 4,
           categoria: "branding",
-          titulo: "CYN",
-          cliente: "Cliente por definir",
+          titulo: "Branding para redes sociales",
+          cliente: "Cyn Alaluna",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "Desarrollamos el branding para las redes sociales de una marca enfocada en comunicación interna. Este diseño, fresco y lleno de energía, busca ser cercano y auténtico, creando una conexión genuina entre los equipos. Cada elemento visual ha sido cuidadosamente pensado para mostrar los temas de comunicación interna de manera efectiva y dinámica.",
           imagenRecuadro: CYN1,
           imagenes: [
             {
@@ -240,10 +240,10 @@ const InfoContextProvider = ({ children }) => {
         {
           id: 5,
           categoria: "branding",
-          titulo: "mondi",
-          cliente: "Cliente por definir",
+          titulo: "Logotipo y branding",
+          cliente: "Mondi",
           descripcion:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium accusamus iure tempore dolorem voluptate, maiores ullam asperiores facere quis harum expedita voluptatem ad vero in a? Laboriosam nostrum qui perferendis facere id, ex eveniet illo deleniti, officia natus ducimus reiciendis.",
+            "Nos enamoramos por completo de este proyecto, donde tuvimos el privilegio de acompañar a nuestro cliente en la creación de una marca que trasciende lo convencional. En este camino, el logotipo juega un papel clave, reflejando perfectamente la esencia de la marca y conectando con su concepto integral. La marca no solo transmite información, sino también emociones, experiencias y narrativas que hacen que se sienta auténtica y significativa.",
           imagenRecuadro: mondi1,
           imagenes: [
             {
@@ -266,10 +266,10 @@ const InfoContextProvider = ({ children }) => {
         {
           id: 6,
           categoria: "editorial",
-          titulo: "guia entel",
-          cliente: "Cliente por definir",
+          titulo: "Bitacora de actividades",
+          cliente: "Enseña Perú",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "Compartimos un proyecto muy especial, el diseño de una bitácora de aprendizaje socioemocional creada especialmente para acompañar a los maestros en su labor, cuidar su bienestar y permitirles educar desde el corazón. La propuesta de diseño y diagramación está pensada para evitar que la lectura sea monótona y hacerla visualmente atractiva. Con una estructura gráfica dinámica y fluida, la bitácora facilita su uso y convierte la experiencia en algo más agradable, tanto para los maestros como para cualquiera que lo lea.",
           imagenRecuadro: guiaEntel1,
           imagenes: [
             {
@@ -289,10 +289,10 @@ const InfoContextProvider = ({ children }) => {
         {
           id: 7,
           categoria: "branding",
-          titulo: "nuna",
-          cliente: "Cliente por definir",
+          titulo: "Logotipo y branding",
+          cliente: "Nuna",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "Para este proyecto, creamos un logotipo pensado para acompañar a una marca de juguetes que inspiran a los niños a descubrir el mundo de manera divertida. La propuesta visual refleja un enfoque tanto educativo como lúdico, con un diseño fresco, caracterizado por formas amigables que fomentan la exploración y el juego. Los colores, vibrantes y armoniosos, no solo atraen la mirada, sino que también representan la diversidad de experiencias que los juguetes brindan, invitándolos a aprender a través de la creatividad.",
           imagenRecuadro: nuna1,
           imagenes: [
             {
