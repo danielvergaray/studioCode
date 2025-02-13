@@ -1,6 +1,131 @@
 @import "./reutilizables/colors";
 @import "./reutilizables/tipografias";
 
+@media (max-width: 576px) {
+  .popup-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 30px;
+    background-color: $blanco;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 4000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    .popup-botonCerrar {
+      display: flex;
+      justify-content: right;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px; // Tamaño del círculo
+        height: 15px;
+        background-color: transparent; // Fondo del círculo inactivo
+        border-radius: 50%; // Hace el contenedor circular
+        transition: background-color 0.1s ease; // Transición suave para hover
+        cursor: pointer;
+        border: 1.5px solid $azul-oscuro;
+
+        svg {
+          scale: 1; // Escala del ícono
+          stroke-width: 10;
+        }
+      }
+    }
+
+    .popup-categoria {
+      width: fit-content;
+      border-radius: 20px;
+
+      p {
+        margin: 0;
+        padding: 4px 8px;
+        font-family: "Unbounded-Extralight";
+        color: $blanco;
+        border: 1px solid transparent;
+        font-size: 12px;
+      }
+    }
+    .popup-informacion-desktop {
+      display: none;
+    }
+
+    .popup-informacion-mobile {
+      display: flex;
+      flex-direction: column;
+
+      .popup-informacion-textos-titulo {
+        p {
+          margin: 0;
+        }
+        .popup-informacion-textos-titulo-proyecto {
+          font-size: 2rem;
+          font-family: "Unbounded-Extralight";
+          text-transform: uppercase;
+          line-height: 1;
+          padding: 10px 0;
+          width: 80%;
+        }
+        .popup-informacion-textos-titulo-proyecto-cliente {
+          text-transform: uppercase;
+          font-family: "RedHatDisplay-Medium";
+          font-size: 12px;
+        }
+      }
+      .popup-carrusel {
+        padding: 30px 0;
+        .carrusel-desktop{
+          display: none;
+        }
+        .carrusel-mobile {
+          .carousel-inner {
+            .carousel-item {
+              text-align: center;
+              height: 70vh;
+
+              img {
+                width: 100%;
+                height: 90%;
+              }
+            }
+          }
+        }
+        .carousel-indicators {
+          button {
+            position: relative;
+            top: 0px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid black;
+            background-color: transparent;
+          }
+          .active {
+            background-color: black;
+          }
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+          display: none;
+        }
+      }
+      .popup-informacion-descripcion {
+        font-size: 0.8rem;
+        font-family: "RedHatDisplay-Light";
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
 @media (min-width: 847px) {
   .popup-container {
     display: flex;
@@ -31,23 +156,22 @@
         transition: background-color 0.1s ease; // Transición suave para hover
         cursor: pointer;
         border: 1px solid $azul-oscuro;
-      
+
         &:hover {
           background-color: $azul-rey;
           border: none;
-      
+
           svg {
             fill: $blanco; // Aplica color blanco al ícono
           }
         }
-      
+
         svg {
           scale: 1.4; // Escala del ícono
           fill: $azul-oscuro; // Color por defecto del ícono
           transition: fill 0.1s ease; // Transición suave para el cambio de color
         }
       }
-      
 
       /* svg {
         font-size: 30px;
@@ -75,12 +199,15 @@
       p {
         margin: 0;
         padding: 5px 10px;
-
+        font-family: "Unbounded-Extralight";
         color: $blanco;
         border: 1px solid transparent;
       }
     }
-    .popup-informacion {
+    .popup-informacion-mobile {
+      display: none;
+    }
+    .popup-informacion-desktop {
       display: grid;
       grid-template-columns: 30% 70%;
 
@@ -117,7 +244,7 @@
           font-size: 0.8rem;
           font-family: "RedHatDisplay-Light";
 
-          p{
+          p {
             margin: 0;
           }
         }
@@ -126,7 +253,10 @@
       .popup-carrusel {
         grid-column: 2;
         width: 100%;
-        .carousel {
+        .carrusel-mobile{
+          display: none;
+        }
+        .carrusel-desktop {
           .carousel-inner {
             .carousel-item {
               text-align: center;

@@ -6,8 +6,9 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import { IoIosClose } from "react-icons/io";
 
 const Popup = ({ proyectoSeleccionado, proyectosFiltrados }) => {
-  const { infoPortafolioProyectoArray, colores, cerrarPopup } =
-    useContext(InfoContext);
+
+
+  const { colores, cerrarPopup } = useContext(InfoContext);
 
   /*  console.log(proyectoSeleccionado)
   console.log(infoPortafolioProyectoArray) */
@@ -20,7 +21,7 @@ const Popup = ({ proyectoSeleccionado, proyectosFiltrados }) => {
     <>
       <div className="popup-botonCerrar" onClick={cerrarPopup}>
         <div>
-        <IoIosClose />
+          <IoIosClose />
         </div>
       </div>
       <div
@@ -35,7 +36,7 @@ const Popup = ({ proyectoSeleccionado, proyectosFiltrados }) => {
       >
         <p>{proyectosFiltrados[proyectoSeleccionado].categoria}</p>
       </div>
-      <div className="popup-informacion">
+      <div className="popup-informacion-desktop">
         <div className="popup-informacion-textos">
           <div className="popup-informacion-textos-titulo">
             <p className="popup-informacion-textos-titulo-proyecto">
@@ -56,6 +57,30 @@ const Popup = ({ proyectoSeleccionado, proyectosFiltrados }) => {
             proyectoSeleccionado={proyectoSeleccionado}
           />
         </div>
+      </div>
+
+      <div className="popup-informacion-mobile">
+
+        
+          <div className="popup-informacion-textos-titulo">
+            <p className="popup-informacion-textos-titulo-proyecto">
+              {proyectosFiltrados[proyectoSeleccionado].titulo}
+            </p>
+            <p className="popup-informacion-textos-titulo-proyecto-cliente">
+              {proyectosFiltrados[proyectoSeleccionado].cliente}
+            </p>
+          </div>
+
+          <div className="popup-carrusel">
+            <CarouselMaker
+              infoPortafolioProyectoArray={proyectosFiltrados}
+              proyectoSeleccionado={proyectoSeleccionado}
+            />
+          </div>
+          <div className="popup-informacion-descripcion">
+            <p>{proyectosFiltrados[proyectoSeleccionado].descripcion}</p>
+          </div>
+      
       </div>
     </>
   );

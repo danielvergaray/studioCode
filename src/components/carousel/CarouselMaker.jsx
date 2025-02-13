@@ -15,14 +15,39 @@ const CarouselMaker = ({
   const arrayImagenes =
     infoPortafolioProyectoArray[proyectoSeleccionado].imagenes;
 
+  const arrayImagenesMobile =
+    infoPortafolioProyectoArray[proyectoSeleccionado].imagenesMobile;
+
   return (
-    <Carousel variant="dark" activeIndex={index} onSelect={handleSelect}>
-      {arrayImagenes.map((imagen) => (
-        <Carousel.Item interval={1500}>
-          <img src={imagen.imagenes} alt={imagen.titulo} />
-        </Carousel.Item>
-      ))}
-    </Carousel>
+    <>
+      <Carousel
+        className="carrusel-desktop"
+        variant="dark"
+        activeIndex={index}
+        onSelect={handleSelect}
+      >
+        {arrayImagenes.map((imagen) => (
+          <Carousel.Item interval={2500}>
+            <img src={imagen.imagenes} alt={imagen.titulo} />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+
+      {arrayImagenesMobile && (
+        <Carousel
+          className="carrusel-mobile"
+          variant="dark"
+          activeIndex={index}
+          onSelect={handleSelect}
+        >
+          {arrayImagenesMobile.map((imagen) => (
+            <Carousel.Item interval={2500}>
+              <img src={imagen.imagenes} alt={imagen.titulo} />
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      )}
+    </>
   );
 };
 

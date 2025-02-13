@@ -4,26 +4,51 @@ import home_fondo from "../../assets/imagenes/home/home_fondo.jpg";
 import navBar_nombreEmpresa from "../../assets/imagenes/navbar/nombreEmpresa.png";
 import iconoEstrella from "../../assets/imagenes/home/iconoEstrella.png";
 import iconoFlecha from "../../assets/imagenes/servicios/flecha.png";
-import bodaDaniPao1 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_01.jpeg";
+import bodaDaniPao1Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_01.jpeg";
+import bodaDaniPao2Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_02.jpg";
+import bodaDaniPao3Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_03.jpg";
+import bodaDaniPao1 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_01.jpg";
 import bodaDaniPao2 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_02.jpg";
 import bodaDaniPao3 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_03.jpg";
 import cumpleañosSebas1 from "../../assets/imagenes/proyectos/cumpleañosSebas/SEBAS_01.jpg";
 import cumpleañosSebas2 from "../../assets/imagenes/proyectos/cumpleañosSebas/SEBAS_02.jpg";
-import cumpleañosSebas3 from "../../assets/imagenes/proyectos/cumpleañosSebas/SEBAS_03.png";
+import cumpleañosSebas3 from "../../assets/imagenes/proyectos/cumpleañosSebas/SEBAS_03.jpg";
+import cumpleañosSebas1Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_01.jpg";
+import cumpleañosSebas2Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_02.jpg";
+import cumpleañosSebas3Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_03.png";
+import CYN1Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_01.jpg";
+import CYN2Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_02.png";
+import CYN3Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_03.png";
+import CYN4Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_04.png";
+import CYN5Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_05.png";
 import CYN1 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_01.jpg";
-import CYN2 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_02.png";
-import CYN3 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_03.png";
-import CYN4 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_04.png";
-import CYN5 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_05.png";
+import CYN2 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_02.jpg";
+import CYN3 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_03.jpg";
+import CYN4 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_04.jpg";
+import CYN5 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_05.jpg";
+import mondi1Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_01.jpg";
+import mondi2Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_02.jpg";
+import mondi3Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_03.jpg";
+import mondi4Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_04.jpg";
+import mondi5Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_05.jpg";
 import mondi1 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_01.jpg";
 import mondi2 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_02.jpg";
 import mondi3 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_03.jpg";
 import mondi4 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_04.jpg";
 import mondi5 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_05.jpg";
-import guiaEntel1 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_01.png";
+import guiaEntel1Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL_01.png";
+import guiaEntel2Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL_02.jpg";
+import guiaEntel3Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL_03.png";
+import guiaEntel4Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL_04.png";
+import guiaEntel1 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_01.jpg";
 import guiaEntel2 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_02.jpg";
-import guiaEntel3 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_03.png";
-import guiaEntel4 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_04.png";
+import guiaEntel3 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_03.jpg";
+import guiaEntel4 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_04.jpg";
+import nuna1Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_01.jpg";
+import nuna2Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_02.jpg";
+import nuna3Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_03.jpg";
+import nuna4Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_04.jpg";
+import nuna5Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_05.jpg";
 import nuna1 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_01.jpg";
 import nuna2 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_02.jpg";
 import nuna3 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_03.jpg";
@@ -167,6 +192,17 @@ const InfoContextProvider = ({ children }) => {
               imagenes: bodaDaniPao3,
             },
           ],
+          imagenesMobile: [
+            {
+              imagenes:bodaDaniPao1Mobile,
+            },
+            {
+              imagenes: bodaDaniPao2Mobile,
+            },
+            {
+              imagenes: bodaDaniPao3Mobile,
+            },
+          ],
         },
         {
           id: 2,
@@ -187,6 +223,17 @@ const InfoContextProvider = ({ children }) => {
               imagenes: cumpleañosSebas3,
             },
           ],
+          imagenesMobile: [
+            {
+              imagenes: cumpleañosSebas1Mobile,
+            },
+            {
+              imagenes: cumpleañosSebas2Mobile,
+            },
+            {
+              imagenes: cumpleañosSebas3Mobile,
+            },
+          ],
         },
         {
           id: 3,
@@ -205,6 +252,17 @@ const InfoContextProvider = ({ children }) => {
             },
             {
               imagenes: cumpleañosSebas3,
+            },
+          ],
+          imagenesMobile: [
+            {
+              imagenes: cumpleañosSebas1Mobile,
+            },
+            {
+              imagenes: cumpleañosSebas2Mobile,
+            },
+            {
+              imagenes: cumpleañosSebas3Mobile,
             },
           ],
         },
@@ -236,6 +294,26 @@ const InfoContextProvider = ({ children }) => {
               imagenes: CYN5,
             },
           ],
+          imagenesMobile: [
+            {
+              imagenes: CYN1Mobile,
+            },
+            {
+              imagenes: CYN2Mobile,
+            },
+
+            {
+              imagenes: CYN3Mobile,
+            },
+
+            {
+              imagenes: CYN4Mobile,
+            },
+
+            {
+              imagenes: CYN5Mobile,
+            },
+          ],
         },
         {
           id: 5,
@@ -262,6 +340,23 @@ const InfoContextProvider = ({ children }) => {
               imagenes: mondi5,
             },
           ],
+          imagenesMobile: [
+            {
+              imagenes: mondi1Mobile,
+            },
+            {
+              imagenes: mondi2Mobile,
+            },
+            {
+              imagenes: mondi3Mobile,
+            },
+            {
+              imagenes: mondi4Mobile,
+            },
+            {
+              imagenes: mondi5Mobile,
+            },
+          ],
         },
         {
           id: 6,
@@ -283,6 +378,20 @@ const InfoContextProvider = ({ children }) => {
             },
             {
               imagenes: guiaEntel4,
+            },
+          ],
+          imagenesMobile: [
+            {
+              imagenes: guiaEntel1Mobile,
+            },
+            {
+              imagenes: guiaEntel2Mobile,
+            },
+            {
+              imagenes: guiaEntel3Mobile,
+            },
+            {
+              imagenes: guiaEntel4Mobile,
             },
           ],
         },
@@ -311,6 +420,23 @@ const InfoContextProvider = ({ children }) => {
               imagenes: nuna5,
             },
           ],
+          imagenesMobile: [
+            {
+              imagenes: nuna1Mobile,
+            },
+            {
+              imagenes: nuna2Mobile,
+            },
+            {
+              imagenes: nuna3Mobile,
+            },
+            {
+              imagenes: nuna4Mobile,
+            },
+            {
+              imagenes: nuna5Mobile,
+            },
+          ],
         },
       ],
       footer: [
@@ -330,13 +456,13 @@ const InfoContextProvider = ({ children }) => {
           gris_oscuro: "#B3B3B3",
         },
       ],
-      imagenes_servicio_acordion:[
+      imagenes_servicio_acordion: [
         {
           servicios_branding_foto,
           servicios_webdesign_foto,
           servicios_editorial_foto,
-        }
-      ]
+        },
+      ],
     },
   ];
 
@@ -624,12 +750,12 @@ const InfoContextProvider = ({ children }) => {
           ],
         },
       ],
-      imagenes_servicio_acordion:[
+      imagenes_servicio_acordion: [
         {
           servicios_branding_foto,
           servicios_webdesign_foto,
           servicios_editorial_foto,
-        }
+        },
       ],
     },
   ];
@@ -659,8 +785,8 @@ const InfoContextProvider = ({ children }) => {
   };
 
   const cerrarPopup = () => {
-    setProyectoSeleccionado(null);
     document.body.classList.remove("popup-open");
+    setProyectoSeleccionado(null);
   };
 
   /* CAMBIO DE IDIOMA */
@@ -674,10 +800,9 @@ const InfoContextProvider = ({ children }) => {
   /*  const arraySegunIdioma =
     idioma === "ENG" ? infoHomeArray_ingles : infoHomeArray; */
 
-    /* PARA MOSTRAR IMAGEN AL LADO DEL ACORDION */
+  /* PARA MOSTRAR IMAGEN AL LADO DEL ACORDION */
 
   const [accordionAbierto, setAccordionAbierto] = useState("1");
-
 
   const values = {
     //infoHomeArray: Object.values(informacion[0].home),
@@ -698,7 +823,6 @@ const InfoContextProvider = ({ children }) => {
         : informacion[0].imagenes_servicio_acordion
     ),
 
-
     infoPortafolioArray: Object.values(
       idioma === "ENG"
         ? informacion_ingles[0].portafolio
@@ -713,10 +837,6 @@ const InfoContextProvider = ({ children }) => {
       idioma === "ENG" ? informacion_ingles[0].footer : informacion[0].footer
     ),
 
-
-
-    
-
     //infoColoresArray: Object.values (informacion_colores[0].colores),
     proyectoSeleccionado,
     setProyectoSeleccionado,
@@ -725,8 +845,8 @@ const InfoContextProvider = ({ children }) => {
     idioma,
     setIdioma,
     cambiarIdioma,
-    accordionAbierto, 
-    setAccordionAbierto
+    accordionAbierto,
+    setAccordionAbierto,
   };
 
   return <InfoContext.Provider value={values}>{children}</InfoContext.Provider>;
