@@ -16,6 +16,10 @@ import cumpleañosSebas3 from "../../assets/imagenes/proyectos/cumpleañosSebas/
 import cumpleañosSebas1Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_01.jpg";
 import cumpleañosSebas2Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_02.jpg";
 import cumpleañosSebas3Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_03.png";
+import promnight1 from "../../assets/imagenes/proyectos/promnight/PROMNIGHT_01.jpg";
+import promnight2 from "../../assets/imagenes/proyectos/promnight/PROMNIGHT_02.jpg";
+import promnight3 from "../../assets/imagenes/proyectos/promnight/PROMNIGHT_03.jpg";
+import promnight4 from "../../assets/imagenes/proyectos/promnight/PROMNIGHT_04.jpg";
 import CYN1Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_01.jpg";
 import CYN2Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_02.png";
 import CYN3Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_03.png";
@@ -54,9 +58,9 @@ import nuna2 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_02.jpg";
 import nuna3 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_03.jpg";
 import nuna4 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_04.jpg";
 import nuna5 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_05.jpg";
-import servicios_branding_foto from "../../assets/imagenes/servicios/BRANDING_small.jpg";
-import servicios_webdesign_foto from "../../assets/imagenes/servicios/WEBDESIGN_small.jpg";
-import servicios_editorial_foto from "../../assets/imagenes/servicios/EDITORIAL_small.jpg";
+import servicios_branding_foto from "../../assets/imagenes/servicios/BRANDING.jpg";
+import servicios_webdesign_foto from "../../assets/imagenes/servicios/WEBDESIGN.jpg";
+import servicios_editorial_foto from "../../assets/imagenes/servicios/EDITORIAL.jpg";
 
 const InfoContextProvider = ({ children }) => {
   const informacion = [
@@ -206,68 +210,6 @@ const InfoContextProvider = ({ children }) => {
         },
         {
           id: 2,
-          categoria: "webdesign",
-          titulo: "Invitación digital de cumpleaños",
-          cliente: "Cliente por definir",
-          descripcion:
-            "Creamos esta invitación digital para el cumpleaños de Sebas, inspirada en la épica temática de Star Wars. Con un diseño simple y elegante, logramos un estilo moderno que se adapta perfectamente a esta ocasión especial. Cada detalle ha sido pensado para transportar a los invitados a este fascinante universo, haciendo de esta invitación una experiencia increíble. ¡Que la Fuerza esté con todos en este día tan especial!",
-          imagenRecuadro: cumpleañosSebas1,
-          imagenes: [
-            {
-              imagenes: cumpleañosSebas1,
-            },
-            {
-              imagenes: cumpleañosSebas2,
-            },
-            {
-              imagenes: cumpleañosSebas3,
-            },
-          ],
-          imagenesMobile: [
-            {
-              imagenes: cumpleañosSebas1Mobile,
-            },
-            {
-              imagenes: cumpleañosSebas2Mobile,
-            },
-            {
-              imagenes: cumpleañosSebas3Mobile,
-            },
-          ],
-        },
-        {
-          id: 3,
-          categoria: "webdesign",
-          titulo: "cumpleaños sebas",
-          cliente: "Cliente por definir",
-          descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
-          imagenRecuadro: cumpleañosSebas1,
-          imagenes: [
-            {
-              imagenes: cumpleañosSebas1,
-            },
-            {
-              imagenes: cumpleañosSebas2,
-            },
-            {
-              imagenes: cumpleañosSebas3,
-            },
-          ],
-          imagenesMobile: [
-            {
-              imagenes: cumpleañosSebas1Mobile,
-            },
-            {
-              imagenes: cumpleañosSebas2Mobile,
-            },
-            {
-              imagenes: cumpleañosSebas3Mobile,
-            },
-          ],
-        },
-        {
-          id: 4,
           categoria: "branding",
           titulo: "Branding para redes sociales",
           cliente: "Cyn Alaluna",
@@ -316,6 +258,80 @@ const InfoContextProvider = ({ children }) => {
           ],
         },
         {
+          id: 3,
+          categoria: "editorial",
+          titulo: "Bitacora de actividades",
+          cliente: "Enseña Perú",
+          descripcion:
+            "Compartimos un proyecto muy especial, el diseño de una bitácora de aprendizaje socioemocional creada especialmente para acompañar a los maestros en su labor, cuidar su bienestar y permitirles educar desde el corazón. La propuesta de diseño y diagramación está pensada para evitar que la lectura sea monótona y hacerla visualmente atractiva. Con una estructura gráfica dinámica y fluida, la bitácora facilita su uso y convierte la experiencia en algo más agradable, tanto para los maestros como para cualquiera que lo lea.",
+          imagenRecuadro: guiaEntel1,
+          imagenes: [
+            {
+              imagenes: guiaEntel1,
+            },
+            {
+              imagenes: guiaEntel2,
+            },
+            {
+              imagenes: guiaEntel3,
+            },
+            {
+              imagenes: guiaEntel4,
+            },
+          ],
+          imagenesMobile: [
+            {
+              imagenes: guiaEntel1Mobile,
+            },
+            {
+              imagenes: guiaEntel2Mobile,
+            },
+            {
+              imagenes: guiaEntel3Mobile,
+            },
+            {
+              imagenes: guiaEntel4Mobile,
+            },
+          ],
+        },
+        {
+          id: 4,
+          categoria: "webdesign",
+          titulo: "Invitación digital graduación",
+          cliente: "Colegio Sor Querubina",
+          descripcion:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis ipsa, quo iusto totam dolor quaerat odit excepturi quibusdam quas. A quisquam, ullam perferendis esse tenetur animi optio voluptates incidunt rerum consequatur minus maxime asperiores reiciendis quod, vel cum illo odio!",
+          imagenRecuadro:  promnight1,
+          imagenes: [
+            {
+              imagenes: promnight1,
+            },
+            {
+              imagenes: promnight2,
+            },
+            {
+              imagenes: promnight3,
+            },
+            {
+              imagenes: promnight4,
+            },
+          ],
+          imagenesMobile: [
+            {
+              imagenes: promnight1,
+            },
+            {
+              imagenes: promnight2,
+            },
+            {
+              imagenes: promnight3,
+            },
+            {
+              imagenes: promnight4,
+            },
+          ],
+        },
+        {
           id: 5,
           categoria: "branding",
           titulo: "Logotipo y branding",
@@ -360,38 +376,32 @@ const InfoContextProvider = ({ children }) => {
         },
         {
           id: 6,
-          categoria: "editorial",
-          titulo: "Bitacora de actividades",
-          cliente: "Enseña Perú",
+          categoria: "webdesign",
+          titulo: "cumpleaños sebas",
+          cliente: "Sebastian",
           descripcion:
-            "Compartimos un proyecto muy especial, el diseño de una bitácora de aprendizaje socioemocional creada especialmente para acompañar a los maestros en su labor, cuidar su bienestar y permitirles educar desde el corazón. La propuesta de diseño y diagramación está pensada para evitar que la lectura sea monótona y hacerla visualmente atractiva. Con una estructura gráfica dinámica y fluida, la bitácora facilita su uso y convierte la experiencia en algo más agradable, tanto para los maestros como para cualquiera que lo lea.",
-          imagenRecuadro: guiaEntel1,
+            "Creamos esta invitación digital para el cumpleaños de Sebas, inspirada en la épica temática de Star Wars. Con un diseño simple y elegante, logramos un estilo moderno que se adapta perfectamente a esta ocasión especial. Cada detalle ha sido pensado para transportar a los invitados a este fascinante universo, haciendo de esta invitación una experiencia increíble. ¡Que la Fuerza esté con todos en este día tan especial!",
+          imagenRecuadro: cumpleañosSebas1,
           imagenes: [
             {
-              imagenes: guiaEntel1,
+              imagenes: cumpleañosSebas1,
             },
             {
-              imagenes: guiaEntel2,
+              imagenes: cumpleañosSebas2,
             },
             {
-              imagenes: guiaEntel3,
-            },
-            {
-              imagenes: guiaEntel4,
+              imagenes: cumpleañosSebas3,
             },
           ],
           imagenesMobile: [
             {
-              imagenes: guiaEntel1Mobile,
+              imagenes: cumpleañosSebas1Mobile,
             },
             {
-              imagenes: guiaEntel2Mobile,
+              imagenes: cumpleañosSebas2Mobile,
             },
             {
-              imagenes: guiaEntel3Mobile,
-            },
-            {
-              imagenes: guiaEntel4Mobile,
+              imagenes: cumpleañosSebas3Mobile,
             },
           ],
         },
@@ -588,10 +598,10 @@ const InfoContextProvider = ({ children }) => {
         {
           id: 1,
           categoria: "webdesign",
-          titulo: "digital wedding invitation",
+          titulo: "invitación digital para boda",
           cliente: "dani & pao",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "This project was created with a unique and personal approach, thought especially for Dani and Pao. Through a visual design adapted to their tastes and personality, we managed to tell their story in an authentic and meaningful way. The interactive layout of the information not only makes the invitation practical, but also turns it into a memorable experience. A modern and creative way to invite your loved ones to be part of such a special day.",
           imagenRecuadro: bodaDaniPao1,
           imagenes: [
             {
@@ -604,54 +614,25 @@ const InfoContextProvider = ({ children }) => {
               imagenes: bodaDaniPao3,
             },
           ],
+          imagenesMobile: [
+            {
+              imagenes:bodaDaniPao1Mobile,
+            },
+            {
+              imagenes: bodaDaniPao2Mobile,
+            },
+            {
+              imagenes: bodaDaniPao3Mobile,
+            },
+          ],
         },
         {
           id: 2,
-          categoria: "webdesign",
-          titulo: "sebas digital invitation",
-          cliente: "Cliente por definir",
-          descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
-          imagenRecuadro: cumpleañosSebas1,
-          imagenes: [
-            {
-              imagenes: cumpleañosSebas1,
-            },
-            {
-              imagenes: cumpleañosSebas2,
-            },
-            {
-              imagenes: cumpleañosSebas3,
-            },
-          ],
-        },
-        {
-          id: 3,
-          categoria: "webdesign",
-          titulo: "sebas birthday",
-          cliente: "Cliente por definir",
-          descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
-          imagenRecuadro: cumpleañosSebas1,
-          imagenes: [
-            {
-              imagenes: cumpleañosSebas1,
-            },
-            {
-              imagenes: cumpleañosSebas2,
-            },
-            {
-              imagenes: cumpleañosSebas3,
-            },
-          ],
-        },
-        {
-          id: 4,
           categoria: "branding",
-          titulo: "CYN",
-          cliente: "Cliente por definir",
+          titulo: "Branding for social media",
+          cliente: "Cyn Alaluna",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "We developed the branding for the social media of a brand focused on internal communication. This design, fresh and full of energy, seeks to be close and authentic, creating a genuine connection between teams. Each visual element has been carefully thought out to show internal communication topics in an effective and dynamic way.",
           imagenRecuadro: CYN1,
           imagenes: [
             {
@@ -673,14 +654,108 @@ const InfoContextProvider = ({ children }) => {
               imagenes: CYN5,
             },
           ],
+          imagenesMobile: [
+            {
+              imagenes: CYN1Mobile,
+            },
+            {
+              imagenes: CYN2Mobile,
+            },
+
+            {
+              imagenes: CYN3Mobile,
+            },
+
+            {
+              imagenes: CYN4Mobile,
+            },
+
+            {
+              imagenes: CYN5Mobile,
+            },
+          ],
+        },
+        {
+          id: 3,
+          categoria: "editorial",
+          titulo: "Log of activities",
+          cliente: "Enseña Perú",
+          descripcion:
+            "We share a very special project, the design of a social-emotional learning log created especially to accompany teachers in their work, take care of their well-being and allow them to educate from the heart. The design and layout proposal is designed to avoid monotonous reading and make it visually attractive. With a dynamic and fluid graphic structure, the log makes it easy to use and makes the experience more enjoyable, both for teachers and for anyone who reads it.",
+          imagenRecuadro: guiaEntel1,
+          imagenes: [
+            {
+              imagenes: guiaEntel1,
+            },
+            {
+              imagenes: guiaEntel2,
+            },
+            {
+              imagenes: guiaEntel3,
+            },
+            {
+              imagenes: guiaEntel4,
+            },
+          ],
+          imagenesMobile: [
+            {
+              imagenes: guiaEntel1Mobile,
+            },
+            {
+              imagenes: guiaEntel2Mobile,
+            },
+            {
+              imagenes: guiaEntel3Mobile,
+            },
+            {
+              imagenes: guiaEntel4Mobile,
+            },
+          ],
+        },
+        {
+          id: 4,
+          categoria: "webdesign",
+          titulo: "Digital graduation invitation",
+          cliente: "Sor Querubina College",
+          descripcion:
+            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis ipsa, quo iusto totam dolor quaerat odit excepturi quibusdam quas. A quisquam, ullam perferendis esse tenetur animi optio voluptates incidunt rerum consequatur minus maxime asperiores reiciendis quod, vel cum illo odio!",
+          imagenRecuadro:  promnight1,
+          imagenes: [
+            {
+              imagenes: promnight1,
+            },
+            {
+              imagenes: promnight2,
+            },
+            {
+              imagenes: promnight3,
+            },
+            {
+              imagenes: promnight4,
+            },
+          ],
+          imagenesMobile: [
+            {
+              imagenes: promnight1,
+            },
+            {
+              imagenes: promnight2,
+            },
+            {
+              imagenes: promnight3,
+            },
+            {
+              imagenes: promnight4,
+            },
+          ],
         },
         {
           id: 5,
           categoria: "branding",
-          titulo: "mondi",
-          cliente: "Cliente por definir",
+          titulo: "Logo and branding",
+          cliente: "Mondi",
           descripcion:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium accusamus iure tempore dolorem voluptate, maiores ullam asperiores facere quis harum expedita voluptatem ad vero in a? Laboriosam nostrum qui perferendis facere id, ex eveniet illo deleniti, officia natus ducimus reiciendis.",
+            "We fell completely in love with this project, where we had the privilege of accompanying our client in the creation of a brand that transcends the conventional. In this path, the logo plays a key role, perfectly reflecting the essence of the brand and connecting with its integral concept. The brand not only conveys information, but also emotions, experiences and narratives that make it feel authentic and meaningful.",
           imagenRecuadro: mondi1,
           imagenes: [
             {
@@ -699,37 +774,62 @@ const InfoContextProvider = ({ children }) => {
               imagenes: mondi5,
             },
           ],
+          imagenesMobile: [
+            {
+              imagenes: mondi1Mobile,
+            },
+            {
+              imagenes: mondi2Mobile,
+            },
+            {
+              imagenes: mondi3Mobile,
+            },
+            {
+              imagenes: mondi4Mobile,
+            },
+            {
+              imagenes: mondi5Mobile,
+            },
+          ],
         },
         {
           id: 6,
-          categoria: "editorial",
-          titulo: "entel guide",
-          cliente: "Cliente por definir",
+          categoria: "webdesign",
+          titulo: "sebas birthday",
+          cliente: "Sebastian",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
-          imagenRecuadro: guiaEntel1,
+            "We created this digital invitation for Sebas' birthday, inspired by the epic Star Wars theme. With a simple and elegant design, we achieved a modern style that perfectly suits this special occasion. Every detail has been thought out to transport guests to this fascinating universe, making this invitation an incredible experience. May the Force be with you all on this special day!",
+          imagenRecuadro: cumpleañosSebas1,
           imagenes: [
             {
-              imagenes: guiaEntel1,
+              imagenes: cumpleañosSebas1,
             },
             {
-              imagenes: guiaEntel2,
+              imagenes: cumpleañosSebas2,
             },
             {
-              imagenes: guiaEntel3,
+              imagenes: cumpleañosSebas3,
+            },
+          ],
+          imagenesMobile: [
+            {
+              imagenes: cumpleañosSebas1Mobile,
             },
             {
-              imagenes: guiaEntel4,
+              imagenes: cumpleañosSebas2Mobile,
+            },
+            {
+              imagenes: cumpleañosSebas3Mobile,
             },
           ],
         },
         {
           id: 7,
           categoria: "branding",
-          titulo: "nuna",
-          cliente: "Cliente por definir",
+          titulo: "Logo and branding",
+          cliente: "Nuna",
           descripcion:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, quas. Cupiditate distinctio nisi eius. Corporis excepturi maiores repudiandae hic minima.",
+            "For this project, we created a logo designed to accompany a brand of toys that inspire children to discover the world in a fun way. The visual proposal reflects both an educational and playful approach, with a fresh design, characterized by friendly shapes that encourage exploration and play. The vibrant and harmonious colors not only attract the eye, but also represent the diversity of experiences that toys provide, inviting them to learn through creativity.",
           imagenRecuadro: nuna1,
           imagenes: [
             {
@@ -746,6 +846,23 @@ const InfoContextProvider = ({ children }) => {
             },
             {
               imagenes: nuna5,
+            },
+          ],
+          imagenesMobile: [
+            {
+              imagenes: nuna1Mobile,
+            },
+            {
+              imagenes: nuna2Mobile,
+            },
+            {
+              imagenes: nuna3Mobile,
+            },
+            {
+              imagenes: nuna4Mobile,
+            },
+            {
+              imagenes: nuna5Mobile,
             },
           ],
         },

@@ -24,8 +24,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 15px; // Tamaño del círculo
-        height: 15px;
+        width: 20px; // Tamaño del círculo
+        height: 20px;
         background-color: transparent; // Fondo del círculo inactivo
         border-radius: 50%; // Hace el contenedor circular
         transition: background-color 0.1s ease; // Transición suave para hover
@@ -33,7 +33,7 @@
         border: 1.5px solid $azul-oscuro;
 
         svg {
-          scale: 1; // Escala del ícono
+          scale: 1.25; // Escala del ícono
           stroke-width: 10;
         }
       }
@@ -116,7 +116,7 @@
         }
       }
       .popup-informacion-descripcion {
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-family: "RedHatDisplay-Light";
         p {
           margin: 0;
