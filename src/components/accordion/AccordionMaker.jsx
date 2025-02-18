@@ -87,13 +87,10 @@ const AccordionMaker = () => {
                     <p className="home_desktop-servicios-p">
                       {servicio.titulo}
                     </p>
-                    {/*     <div className="home_desktop-servicios-titulo-estrella">
-                    <img src={servicio.icono_estrella} alt="" />
-                  </div> */}
                   </div>
                   {/* Acordion interno */}
                   <>
-                    <span></span>
+                    <span className="linea-titulo"></span>
                     {servicio.descripcion_servicios.map(
                       (descripcionServicio, index) => (
                         <section className="servicios" key={index}>

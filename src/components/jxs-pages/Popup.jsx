@@ -61,7 +61,6 @@ const Popup = ({ proyectoSeleccionado, proyectosFiltrados }) => {
 
       <div className="popup-informacion-mobile">
 
-        
           <div className="popup-informacion-textos-titulo">
             <p className="popup-informacion-textos-titulo-proyecto">
               {proyectosFiltrados[proyectoSeleccionado].titulo}
