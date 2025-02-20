@@ -32,7 +32,7 @@
             background-color: $azul-rey;
             border-radius: 0;
             padding: 0px;
-            --bs-dropdown-min-width: 5rem;
+            --bs-dropdown-min-width: 6rem;
             margin-right: 8px;
             clip-path: polygon(
               83% 16%,
@@ -48,7 +48,7 @@
               color: $blanco;
               opacity: 0.5;
               padding: 5px;
-              font-size: 10px;
+              font-size: 15px;
          
               &:hover {
                 background-color: transparent;
@@ -75,7 +75,7 @@
           button {
             background-color: transparent;
             border: none;
-            font-size: 12px;
+            font-size: 15px;
             svg {
               margin-left: 5px;
               margin-bottom: 3px;

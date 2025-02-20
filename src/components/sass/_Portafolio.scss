@@ -27,7 +27,7 @@
 
     .portafolio-menu-mobile {
       display: flex;
-      width: 50%;
+      width: 52%;
       justify-content: space-around;
       flex-wrap: wrap;
       margin: auto;
@@ -41,7 +41,7 @@
           border: 1px solid transparent;
           color: $azul-oscuro;
           background-color: transparent;
-
+          font-family: "Unbounded-light";
           &:hover {
             border: 1px solid;
             color: $blanco;

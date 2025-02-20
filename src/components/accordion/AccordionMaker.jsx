@@ -140,7 +140,7 @@ const AccordionMaker = () => {
               <Accordion.Item
                 eventKey={servicio.item}
                 key={index}
-                onClick={() => handleToggleMobile(servicio.item)}
+                /* onClick={() => handleToggleMobile(servicio.item)} */
                 className={activeKey === servicio.item ? "item-activo" : ""}
                 style={
                   index === 0
@@ -157,7 +157,7 @@ const AccordionMaker = () => {
                   className={activeKey === servicio.item ? "oculto" : ""}
                 >
                   <p>{servicio.titulo}</p>
-                  <span className="accordion-icon">
+                  <span onClick={() => handleToggleMobile(servicio.item)} className="accordion-icon">
                     <img src={servicio.icono_flecha} alt="icono-flecha" />
                   </span>
                 </Accordion.Header>
