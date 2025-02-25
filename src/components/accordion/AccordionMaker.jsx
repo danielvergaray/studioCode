@@ -3,6 +3,7 @@ import Accordion from "react-bootstrap/Accordion";
 import { useContext } from "react";
 import InfoContext from "../infoContext/InfoContext";
 import { BiPlus, BiMinus } from "react-icons/bi";
+import "animate.css/animate.min.css";
 
 const AccordionMaker = () => {
   const [activeKey, setActiveKey] = useState("1"); // Inicialmente abierto el item con eventKey "0"
@@ -57,7 +58,7 @@ const AccordionMaker = () => {
               eventKey={servicio.item}
               key={index}
               onClick={() => handleToggle(servicio.item)}
-              className={activeKey === servicio.item ? "item-activo" : ""}
+              className={activeKey === servicio.item ? "item-activo animate__animated animate__slideInRight" : ""}
               style={
                 index === 0
                   ? { backgroundColor: `${colores.azul_rey}` }
