@@ -5,7 +5,7 @@ import navBar_nombreEmpresa from "../../assets/imagenes/navbar/nombreEmpresa.png
 import iconoEstrella from "../../assets/imagenes/home/iconoEstrella.png";
 import iconoFlecha from "../../assets/imagenes/servicios/flecha.png";
 import bodaDaniPao1Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_01.jpeg";
-import bodaDaniPao2Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_02.jpg";
+import bodaDaniPao2Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/Mobile-BODA-DANI-Y-PAO_01.jpeg";
 import bodaDaniPao3Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_03.jpg";
 import bodaDaniPao1 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_01.jpg";
 import bodaDaniPao2 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_02.jpg";
