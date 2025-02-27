@@ -1,7 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import InfoContext from "../infoContext/InfoContext";
 import { NavLink } from "react-router-dom";
 import Popup from "./Popup";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Portafolio = () => {
   const {
@@ -55,12 +57,29 @@ const Portafolio = () => {
 
   const [verMas, setVerMas] = useState(true);
 
+  useEffect(() => {
+    Aos.init();
+  }, [{ duration: 1000 }]);
+
   return (
     <>
       {infoPortafolioArray.map((info, index) => (
         <div className="portafolio-header" key={index}>
-          <p className="portafolio-header-pretitulo">{info.pretitulo}</p>
-          <h1 className="portafolio-header-titulo">{info.titulo}</h1>
+          <p
+            className="portafolio-header-pretitulo"
+            data-aos="fade-in"
+            data-aos-duration="1000"
+          >
+            {info.pretitulo}
+          </p>
+          <h1
+            className="portafolio-header-titulo"
+            data-aos="flip-right"
+            data-aos-delay="300"
+            data-aos-easing="linear"
+          >
+            {info.titulo}
+          </h1>
 
           <section className="portafolio-menu">
             {info.menu.map((opcion, menuIndex) => (
@@ -108,6 +127,8 @@ const Portafolio = () => {
                         ? colores.naranja
                         : null,
                   }}
+                  data-aos="fade-in"
+                  data-aos-delay={menuIndex * 600}
                 >
                   {opcion.opcion}
                 </NavLink>
@@ -177,6 +198,8 @@ const Portafolio = () => {
                   key={index}
                   className="portafolio-proyectos-item"
                   onClick={() => funcionSeleccionarProyecto(index)}
+                  data-aos="fade-in"
+                  data-aos-delay="1000"
                 >
                   <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
                 </div>
