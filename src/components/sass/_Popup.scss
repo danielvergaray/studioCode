@@ -9,7 +9,7 @@
     padding-bottom: 50px;
     background-color: $blanco;
     width: 100vw;
-    height: 500px;
+    height: 100vh;
     position: fixed;
     z-index: 4000;
     top: 50%;
@@ -87,7 +87,7 @@
           .carousel-inner {
             .carousel-item {
               text-align: center;
-              height: 50vh;
+              height: 40vh;
 
               img {
                 width: 100%;
