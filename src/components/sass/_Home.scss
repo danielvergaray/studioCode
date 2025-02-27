@@ -1,7 +1,9 @@
 @use "./reutilizables/tipografias";
 @import "./reutilizables/colors";
 
-@media (max-width: 576px) {
+/* MOBILE */
+
+@media (max-width: 846px) {
   .home_desktop {
     display: block;
     background-image: url("./assets/imagenes/home/home_fondo.jpg");
@@ -153,6 +155,8 @@
   }
 }
 
+/* DESKTOP */
+
 @media (min-width: 847px) {
   .home_desktop {
     display: block;
@@ -197,6 +201,7 @@
           background-color: $azul-rey;
           border-radius: 0;
           padding: 0px;
+          margin-top: 30px;
           clip-path: polygon(
             83% 16%,
             88% 0,

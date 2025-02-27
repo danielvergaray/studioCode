@@ -8,7 +8,7 @@ import "animate.css/animate.min.css";
 const AccordionMaker = () => {
   const [activeKey, setActiveKey] = useState("1"); // Inicialmente abierto el item con eventKey "0"
 
-  const { infoServiciosArray, colores, setAccordionAbierto } =
+  const { infoServiciosArray, colores, setAccordionAbierto, accordionAbierto } =
     useContext(InfoContext);
 
   const [mostrarInfo, setMostrarInfo] = useState(0);
@@ -18,13 +18,14 @@ const AccordionMaker = () => {
     if (key !== activeKey) {
       // Solo cambia el activo si el nuevo key es diferente al actual
       setActiveKey(key);
+      
     }
     setAccordionAbierto(key);
   };
 
   const toggleInfo = (index) => {
     setMostrarInfo((prevState) => (prevState === index ? 0 : index)); // Alternar índice activo
-    console.log(index);
+
   };
 
   const scrollFunction = () => {
@@ -44,14 +45,21 @@ const AccordionMaker = () => {
     setAccordionAbierto(key);
     scrollFunction();
   };
-
+console.log(accordionAbierto)
   return (
     <>
       <Accordion
         className="acordion-externo-desktop"
         activeKey={activeKey}
         flush
-      >
+        style={
+          accordionAbierto === "1"
+            ? { backgroundColor: `${colores.azul_rey}` }
+            : accordionAbierto === "2"
+            ? { backgroundColor: `${colores.azul_oscuro}` }
+            : { backgroundColor: `${colores.naranja}` }
+        }
+        >
         {infoServiciosArray.map((servicio, index) => (
           <>
             <Accordion.Item
@@ -75,6 +83,7 @@ const AccordionMaker = () => {
                   <img src={servicio.icono_flecha} alt="icono-flecha" />
                 </span>
               </Accordion.Header>
+              
               <Accordion.Body
                 className={
                   activeKey === servicio.item ? "cuerpo_acordion" : "oculto"
