@@ -5,8 +5,8 @@
   .popup-container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    padding-top: 30px;
+    padding: 50px 30px;
+    padding-bottom: 50px;
     background-color: $blanco;
     width: 100vw;
     height: 100vh;
@@ -79,7 +79,7 @@
         }
       }
       .popup-carrusel {
-        padding: 30px 0;
+        padding: 10px 0;
         .carrusel-desktop {
           display: none;
         }
@@ -87,7 +87,7 @@
           .carousel-inner {
             .carousel-item {
               text-align: center;
-              height: 70vh;
+              height: 65vh;
 
               img {
                 width: 100%;
