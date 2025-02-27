@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     padding: 50px 30px;
-    padding-bottom: 50px;
     background-color: $blanco;
     width: 100vw;
     height: 100vh;
@@ -59,7 +58,7 @@
     .popup-informacion-mobile {
       display: flex;
       flex-direction: column;
-
+      margin: 20px 0;
       .popup-informacion-textos-titulo {
         p {
           margin: 0;
