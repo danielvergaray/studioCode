@@ -26,8 +26,7 @@
       }
       .home_mobile-navbar-idioma {
         font-family: "Unbounded-regular";
-       
-      
+
         .dropdown {
           text-align: right;
           .dropdown-menu {
@@ -45,13 +44,13 @@
               0 100%,
               0 17%
             );
-            
+
             a {
               color: $blanco;
               opacity: 0.5;
               padding: 5px;
               font-size: 15px;
-         
+
               &:hover {
                 background-color: transparent;
                 color: $blanco;
@@ -64,7 +63,7 @@
             :nth-child(2) {
               padding-bottom: 0;
             }
-  
+
             span {
               display: block; // Asegura que el `span` actúe como una línea separadora
               height: 0.5px; // Define el grosor de la línea
@@ -72,8 +71,7 @@
               width: 100%;
             }
           }
-          
-          
+
           button {
             background-color: transparent;
             border: none;
@@ -87,8 +85,6 @@
           .dropdown-toggle::after {
             display: none; // Oculta la flecha por defecto
           }
-
-          
         }
       }
     }
@@ -165,7 +161,7 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-
+    overflow-x: hidden;
     .home_desktop-navbar {
       width: 100%;
       display: grid;

@@ -74,7 +74,7 @@ const Portafolio = () => {
           </p>
           <h1
             className="portafolio-header-titulo"
-            data-aos="flip-right"
+            data-aos="flip-up"
             data-aos-delay="300"
             data-aos-easing="linear"
           >
