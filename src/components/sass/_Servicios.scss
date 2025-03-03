@@ -171,7 +171,7 @@
     display: grid;
     grid-template-columns: 40% 60%;
     //height: 500px;
-
+    height: min-content;
     .home_desktop-servicios-imagen {
       //height: 500px;
       grid-column: 1;
@@ -189,10 +189,11 @@
       display: flex; // Alinea los ítems en fila
       flex-direction: row; // Coloca los elementos lado a lado
       overflow-x: hidden;
+
       .accordion-item {
         display: flex;
         flex-direction: row-reverse; // Mantiene header y body apilados dentro de cada ítem
-        justify-content: center;
+        //justify-content: center;
 
         .accordion-header {
           writing-mode: vertical-rl; // Hace que el texto se lea de abajo hacia arriba
@@ -207,12 +208,14 @@
             color: white;
             font-size: 50px;
             text-transform: uppercase;
-            margin: 0 auto;
-            height: 400px;
+            margin: 0;
+            height: 100%;
             font-size: 40px;
             font-family: "Unbounded-Extralight";
-            padding: 30px;
+            padding: 20px;
             padding-top: 40px;
+            display: grid;
+            grid-template-columns: 80% 20%;
             &:focus {
               /* Quita efecto de bordes cuando se hace click */
               outline: none;
@@ -223,17 +226,21 @@
             display: none; /* Oculta la flecha */
           }
           .accordion-icon {
-            display: flex;
+            width: 40px;
             position: absolute;
-            top: 100%;
+            top: 0%;
             margin: auto;
             transform: translate(-50%, -50%);
             transform: rotate(180deg);
-
+            grid-column: 2;
             img {
               padding-bottom: 0px;
               width: 40px;
             }
+          }
+          p {
+            grid-column: 1;
+            margin: 0;
           }
         }
 
@@ -251,7 +258,9 @@
         padding: 35px;
         display: flex;
         justify-content: left;
-z-index: 200;
+        align-items: center;
+        z-index: 200;
+
         .accordion-body {
           padding: 0;
           width: 100%;
@@ -295,6 +304,7 @@ z-index: 200;
       flex-direction: column; /* Restablecer el flujo interno */
       background-color: transparent;
       padding: 0 50px 0 0;
+
       .accordion-item {
         display: flex;
         flex-direction: column;

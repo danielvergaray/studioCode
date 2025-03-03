@@ -4,55 +4,59 @@ import home_fondo from "../../assets/imagenes/home/home_fondo.jpg";
 import navBar_nombreEmpresa from "../../assets/imagenes/navbar/nombreEmpresa.png";
 import iconoEstrella from "../../assets/imagenes/home/iconoEstrella.png";
 import iconoFlecha from "../../assets/imagenes/servicios/flecha.png";
-import bodaDaniPao1Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_01.jpeg";
-import bodaDaniPao2Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/Mobile-BODA-DANI-Y-PAO_01.jpeg";
-import bodaDaniPao3Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_03.jpg";
+import bodaDaniPao1Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_MOBILE_01.jpg";
+import bodaDaniPao2Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_MOBILE_02.jpg";
+import bodaDaniPao3Mobile from "../../assets/imagenes/proyectos/boda_dani-pao/mobile/BODA-DANI-Y-PAO_MOBILE_03.jpg";
 import bodaDaniPao1 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_01.jpg";
 import bodaDaniPao2 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_02.jpg";
 import bodaDaniPao3 from "../../assets/imagenes/proyectos/boda_dani-pao/BODA-DANI-Y-PAO_03.jpg";
 import cumpleañosSebas1 from "../../assets/imagenes/proyectos/cumpleañosSebas/SEBAS_01.jpg";
 import cumpleañosSebas2 from "../../assets/imagenes/proyectos/cumpleañosSebas/SEBAS_02.jpg";
 import cumpleañosSebas3 from "../../assets/imagenes/proyectos/cumpleañosSebas/SEBAS_03.jpg";
-import cumpleañosSebas1Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_01.jpg";
-import cumpleañosSebas2Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_02.jpg";
-import cumpleañosSebas3Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_03.png";
+import cumpleañosSebas1Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_MOBILE_01.jpg";
+import cumpleañosSebas2Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_MOBILE_02.jpg";
+import cumpleañosSebas3Mobile from "../../assets/imagenes/proyectos/cumpleañosSebas/mobile/SEBAS_MOBILE_03.jpg";
 import promnight1 from "../../assets/imagenes/proyectos/promnight/PROMNIGHT_01.jpg";
 import promnight2 from "../../assets/imagenes/proyectos/promnight/PROMNIGHT_02.jpg";
 import promnight3 from "../../assets/imagenes/proyectos/promnight/PROMNIGHT_03.jpg";
 import promnight4 from "../../assets/imagenes/proyectos/promnight/PROMNIGHT_04.jpg";
-import CYN1Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_01.jpg";
-import CYN2Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_02.png";
-import CYN3Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_03.png";
-import CYN4Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_04.png";
-import CYN5Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN_05.png";
+import promnight1Mobile from "../../assets/imagenes/proyectos/promnight/mobile/PROMNIGHT_MOBILE_01.jpg";
+import promnight2Mobile from "../../assets/imagenes/proyectos/promnight/mobile/PROMNIGHT_MOBILE_02.jpg";
+import promnight3Mobile from "../../assets/imagenes/proyectos/promnight/mobile/PROMNIGHT_MOBILE_03.jpg";
+import promnight4Mobile from "../../assets/imagenes/proyectos/promnight/mobile/PROMNIGHT_MOBILE_04.jpg";
+import CYN1Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN-MOBILE_01.jpg";
+import CYN2Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN-MOBILE_02.jpg";
+import CYN3Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN-MOBILE_03.jpg";
+import CYN4Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN-MOBILE_04.jpg";
+import CYN5Mobile from "../../assets/imagenes/proyectos/CYN/mobile/BRANDING-CYN-MOBILE_05.jpg";
 import CYN1 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_01.jpg";
 import CYN2 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_02.jpg";
 import CYN3 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_03.jpg";
 import CYN4 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_04.jpg";
 import CYN5 from "../../assets/imagenes/proyectos/CYN/BRANDING-CYN_05.jpg";
-import mondi1Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_01.jpg";
-import mondi2Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_02.jpg";
-import mondi3Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_03.jpg";
-import mondi4Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_04.jpg";
-import mondi5Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT_05.jpg";
+import mondi1Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT-MOBILE_01.jpg";
+import mondi2Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT-MOBILE_02.jpg";
+import mondi3Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT-MOBILE_03.jpg";
+import mondi4Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT-MOBILE_04.jpg";
+import mondi5Mobile from "../../assets/imagenes/proyectos/mondi/mobile/MONDI-PROJECT-MOBILE_05.jpg";
 import mondi1 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_01.jpg";
 import mondi2 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_02.jpg";
 import mondi3 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_03.jpg";
 import mondi4 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_04.jpg";
 import mondi5 from "../../assets/imagenes/proyectos/mondi/MONDI-PROJECT_05.jpg";
-import guiaEntel1Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL_01.png";
-import guiaEntel2Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL_02.jpg";
-import guiaEntel3Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL_03.png";
-import guiaEntel4Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL_04.png";
+import guiaEntel1Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL-MOBILE_01.jpg";
+import guiaEntel2Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL-MOBILE_02.jpg";
+import guiaEntel3Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL-MOBILE_03.jpg";
+import guiaEntel4Mobile from "../../assets/imagenes/proyectos/guia-docente/mobile/GUIA-ENTEL-MOBILE_04.jpg";
 import guiaEntel1 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_01.jpg";
 import guiaEntel2 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_02.jpg";
 import guiaEntel3 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_03.jpg";
 import guiaEntel4 from "../../assets/imagenes/proyectos/guia-docente/GUIA-ENTEL_04.jpg";
-import nuna1Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_01.jpg";
-import nuna2Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_02.jpg";
-import nuna3Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_03.jpg";
-import nuna4Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_04.jpg";
-import nuna5Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT_05.jpg";
+import nuna1Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT-MOBILE_01.jpg";
+import nuna2Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT-MOBILE_02.jpg";
+import nuna3Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT-MOBILE_03.jpg";
+import nuna4Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT-MOBILE_04.jpg";
+import nuna5Mobile from "../../assets/imagenes/proyectos/nuna/mobile/NUNA-PROJECT-MOBILE_05.jpg";
 import nuna1 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_01.jpg";
 import nuna2 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_02.jpg";
 import nuna3 from "../../assets/imagenes/proyectos/nuna/NUNA-PROJECT_03.jpg";
@@ -318,16 +322,16 @@ const InfoContextProvider = ({ children }) => {
           ],
           imagenesMobile: [
             {
-              imagenes: promnight1,
+              imagenes: promnight1Mobile,
             },
             {
-              imagenes: promnight2,
+              imagenes: promnight2Mobile,
             },
             {
-              imagenes: promnight3,
+              imagenes: promnight3Mobile,
             },
             {
-              imagenes: promnight4,
+              imagenes: promnight4Mobile,
             },
           ],
         },

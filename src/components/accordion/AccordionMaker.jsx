@@ -66,7 +66,7 @@ console.log(accordionAbierto)
               eventKey={servicio.item}
               key={index}
               onClick={() => handleToggle(servicio.item)}
-              className={activeKey === servicio.item ? "item-activo animate__animated animate__slideInRight" : ""}
+              className={activeKey === servicio.item ? "item-activo " : ""}
               style={
                 index === 0
                   ? { backgroundColor: `${colores.azul_rey}` }
@@ -86,7 +86,7 @@ console.log(accordionAbierto)
               
               <Accordion.Body
                 className={
-                  activeKey === servicio.item ? "cuerpo_acordion" : "oculto"
+                  activeKey === servicio.item ? "cuerpo_acordion animate__animated animate__fadeIn" : "oculto"
                 }
               >
                 <section>
