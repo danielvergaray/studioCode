@@ -39,8 +39,8 @@ const Footer = () => {
           </div>
           <div
             className="footer-boton"
-            data-aos="fade-in"
-            data-aos-delay="2000"
+          /*   data-aos="fade-in"
+            data-aos-delay="2000" */
           >
             <div className="footer-boton-texto">
               <p>{info.mensaje}</p>

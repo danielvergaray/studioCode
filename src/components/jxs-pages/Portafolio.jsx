@@ -180,6 +180,8 @@ const Portafolio = () => {
                         ? colores.naranja
                         : null,
                   }}
+                  data-aos="fade-in"
+                  data-aos-delay={menuIndex * 600}
                 >
                   {opcion.opcion}
                 </NavLink>
@@ -228,6 +230,8 @@ const Portafolio = () => {
                   key={index}
                   className="portafolio-proyectos-item"
                   onClick={() => funcionSeleccionarProyecto(index)}
+                  data-aos="fade-in"
+                  data-aos-delay="1000"
                 >
                   <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
                 </div>

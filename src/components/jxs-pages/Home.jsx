@@ -10,6 +10,7 @@ const Home = () => {
   const { infoHomeArray } = useContext(InfoContext);
   const [showFinalPosition, setShowFinalPosition] = useState(false);
   const [primeraPantalla, setPrimeraPantalla] = useState(true);
+  const [primeraPantallaMobile, setPrimeraPantallaMobile] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,6 +24,12 @@ const Home = () => {
     const timerPaantalla = setTimeout(() => {
       setPrimeraPantalla(false);
     }, 3500);
+  });
+
+  useEffect(() => {
+    const timerPaantalla = setTimeout(() => {
+      setPrimeraPantallaMobile(false);
+    }, 4000);
   });
 
   return (
@@ -59,12 +66,41 @@ const Home = () => {
           </div>
 
           <div className="home_mobile-navbar">
-            <div className="home_mobile-navbar-idioma">
-              <DropdownMaker primerIdioma="ESP" segundoIdioma="ENG" />
-            </div>
-            <div className="home_mobile-navbar-logo">
+            {!primeraPantalla ? (
+              <div className="home_mobile-navbar-idioma">
+                <DropdownMaker primerIdioma="ESP" segundoIdioma="ENG" />
+              </div>
+            ) : (
+              <div style={{ height: "34.5px" }}>
+                {/* Para que dejar el contenedor disponible mientras el logo llega a su lugar */}
+              </div>
+            )}
+
+            <motion.div
+              className="home_desktop-navbar-logo"
+              initial={{
+                x: "0vw", // Centrado horizontalmente
+                y: "45vh", // Centrado verticalmente
+                opacity: 1,
+                scale: 0.6,
+              }}
+              animate={
+                showFinalPosition
+                  ? { x: 0, y: 0, opacity: 1, scale: 0.5 }
+                  : { x: "0vw", y: "45vh", opacity: 1, scale: 2 }
+              }
+              transition={{ duration: 3, ease: "easeOut" }}
+            >
+              <img
+                src={info.navBar_nombreEmpresa}
+                alt="logo-studioCode"
+                data-aos="zoom-in"
+              />
+            </motion.div>
+
+            {/* <div className="home_mobile-navbar-logo">
               <img src={info.navBar_nombreEmpresa} alt="logo-studioCode" />
-            </div>
+            </div> */}
           </div>
 
           <div className="home_desktop-title">
@@ -92,9 +128,40 @@ const Home = () => {
           </div>
 
           <div className="home_mobile-title">
-            <p>{info.titulo}</p>
-            <p>{info.nombreEmpresaMobile}</p>
-            <p>{info.nombreEmpresaMobile2}</p>
+            {!primeraPantallaMobile && (
+              <>
+                <p>
+                  {/* {info.titulo} */}
+                  <ReactTyped
+                    strings={[`${info.titulo}`]}
+                    startWhenVisible
+                    typeSpeed={150}
+                    showCursor={false}
+                  />
+                </p>
+                <p>
+                  {/*  {info.nombreEmpresaMobile} */}
+
+                  <ReactTyped
+                    strings={[`${info.nombreEmpresaMobile}`]}
+                    startWhenVisible
+                    typeSpeed={150}
+                    showCursor={false}
+                    startDelay={2000}
+                  />
+                </p>
+                <p>
+                  {/* {info.nombreEmpresaMobile2} */}
+                  <ReactTyped
+                    strings={[`${info.nombreEmpresaMobile2}`]}
+                    startWhenVisible
+                    typeSpeed={150}
+                    showCursor={false}
+                    startDelay={3000}
+                  />
+                </p>
+              </>
+            )}
           </div>
 
           {!primeraPantalla && (
@@ -107,7 +174,6 @@ const Home = () => {
             <div
               className="home_desktop-subtitulo
               animate__animated animate__fadeIn animate__slow animate__delay-3s"
-             
             >
               <p>{info.subtitulo}</p>
             </div>

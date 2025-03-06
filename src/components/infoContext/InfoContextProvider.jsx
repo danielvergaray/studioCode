@@ -304,7 +304,7 @@ const InfoContextProvider = ({ children }) => {
           titulo: "Invitación digital graduación",
           cliente: "Colegio Sor Querubina",
           descripcion:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis ipsa, quo iusto totam dolor quaerat odit excepturi quibusdam quas. A quisquam, ullam perferendis esse tenetur animi optio voluptates incidunt rerum consequatur minus maxime asperiores reiciendis quod, vel cum illo odio!",
+            "Diseño y desarrollo de invitación digital personalizada para una noche única. Incluye toda la información del evento de forma interactiva: desde confirmar tu asistencia y escoger tu mesa, hasta subir canciones a la playlist de Spotify. Animaciones suaves, detalles interactivos y un estilo pensado para que desde el primer clic se sienta la emoción de la prom night. ",
           imagenRecuadro:  promnight1,
           imagenes: [
             {
@@ -722,7 +722,7 @@ const InfoContextProvider = ({ children }) => {
           titulo: "Digital graduation invitation",
           cliente: "Sor Querubina College",
           descripcion:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis ipsa, quo iusto totam dolor quaerat odit excepturi quibusdam quas. A quisquam, ullam perferendis esse tenetur animi optio voluptates incidunt rerum consequatur minus maxime asperiores reiciendis quod, vel cum illo odio!",
+            "Design and development of a personalized digital invitation for a unique evening. It includes all the event information in an interactive way: from confirming your attendance and choosing your table, to uploading songs to the Spotify playlist. Smooth animations, interactive details and a style designed so that from the first click you can feel the excitement of prom night.",
           imagenRecuadro:  promnight1,
           imagenes: [
             {
