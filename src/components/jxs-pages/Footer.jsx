@@ -1,6 +1,7 @@
 import React from "react";
 import { useContext, useEffect } from "react";
 import InfoContext from "../infoContext/InfoContext";
+import { Link } from "react-router-dom";
 import { FiArrowRight } from "react-icons/fi";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -37,18 +38,16 @@ const Footer = () => {
           >
             <p>{info.titulo}</p>
           </div>
-          <div
-            className="footer-boton"
-          /*   data-aos="fade-in"
-            data-aos-delay="2000" */
-          >
-            <div className="footer-boton-texto">
-              <p>{info.mensaje}</p>
-            </div>
+          <div className="footer-boton">
+            <Link to={info.link} target="_blank" key={index} >
+              <div className="footer-boton-texto">
+                <p>{info.mensaje}</p>
+              </div>
 
-            <div className="footer-boton-flecha">
-              <FiArrowRight />
-            </div>
+              <div className="footer-boton-flecha">
+                <FiArrowRight />
+              </div>
+            </Link>
           </div>
         </div>
       ))}

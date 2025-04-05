@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import InfoContext from "../infoContext/InfoContext";
 import { NavLink } from "react-router-dom";
 import Popup from "./Popup";
+import { Spinner } from "react-bootstrap";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -23,6 +24,8 @@ const Portafolio = () => {
 
   // Crear un estado de hover para cada menú
   const [hoverState, setHoverState] = useState([]);
+
+  const [loading, setLoading] = useState(true);
 
   const handleMouseEnter = (index) => {
     const newHoverState = [...hoverState];
@@ -48,11 +51,18 @@ const Portafolio = () => {
 
   const [cantProyectos, setCantProyectos] = useState(6); //Para mostrar solamente 6 productos
   const [cantProyectosMobile, setCantProyectosMobile] = useState(3);
+  const [verMasClicked, setVerMasClicked] = useState(false);
 
   const verMasProyectos = () => {
-    setCantProyectos(cantProyectos + 6);
-    setCantProyectosMobile(cantProyectos + 3);
-    setVerMas(!verMas);
+    setVerMasClicked(true); // Activa el spinner
+    setLoading(true);
+
+    setTimeout(() => {
+      setCantProyectos(cantProyectos + 6);
+      setCantProyectosMobile(cantProyectosMobile + 3);
+      setLoading(false);
+      setVerMas(false);
+    }, 1000); // 2 segundos de carga simulada
   };
 
   const [verMas, setVerMas] = useState(true);
@@ -191,65 +201,103 @@ const Portafolio = () => {
         </div>
       ))}
 
-      <section className="portafolio-proyectos">
-        {categoriaSeleccionada === "todos" || categoriaSeleccionada === "all"
-          ? infoPortafolioProyectoArray
-              .slice(0, cantProyectos)
-              .map((proyecto, index) => (
-                <div
-                  key={index}
-                  className="portafolio-proyectos-item"
-                  onClick={() => funcionSeleccionarProyecto(index)}
-                  data-aos="fade-in"
-                  data-aos-delay="1000"
-                >
-                  <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
-                </div>
-              ))
-          : infoPortafolioProyectoArray
-              .filter(
-                (proyecto) => proyecto.categoria === categoriaSeleccionada
-              ) // Filtrar por categoría
-              .map((proyecto, index) => (
-                <div
-                  key={index}
-                  className="portafolio-proyectos-item"
-                  onClick={() => funcionSeleccionarProyecto(index)}
-                >
-                  <img src={proyecto.imagenRecuadro} alt="" />
-                </div>
-              ))}
-      </section>
+      {
+        <section className="portafolio-proyectos">
+          {/* Primer grupo (los visibles sin hacer click) */}
+          {infoPortafolioProyectoArray.slice(0, 6).map((proyecto, index) => (
+            <div
+              key={index}
+              className="portafolio-proyectos-item"
+              onClick={() => funcionSeleccionarProyecto(index)}
+              data-aos="fade-in"
+              data-aos-delay="1000"
+            >
+              <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
+            </div>
+          ))}
 
-      <section className="portafolio-proyectos-mobile">
-        {categoriaSeleccionada === "todos" || categoriaSeleccionada === "all"
-          ? infoPortafolioProyectoArray
-              .slice(0, cantProyectosMobile)
-              .map((proyecto, index) => (
-                <div
-                  key={index}
-                  className="portafolio-proyectos-item"
-                  onClick={() => funcionSeleccionarProyecto(index)}
-                  data-aos="fade-in"
-                  data-aos-delay="1000"
-                >
-                  <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
-                </div>
-              ))
-          : infoPortafolioProyectoArray
-              .filter(
-                (proyecto) => proyecto.categoria === categoriaSeleccionada
-              ) // Filtrar por categoría
-              .map((proyecto, index) => (
-                <div
-                  key={index}
-                  className="portafolio-proyectos-item"
-                  onClick={() => funcionSeleccionarProyecto(index)}
-                >
-                  <img src={proyecto.imagenRecuadro} alt="" />
-                </div>
-              ))}
-      </section>
+          {/* Segundo grupo (los nuevos que aparecen tras hacer click en ver más) */}
+          {verMasClicked &&
+            (loading ? (
+              <div
+                className="d-flex justify-content-center align-items-center m-auto"
+                style={{ height: "200px" }}
+              >
+                <Spinner animation="border" variant="primary" />
+              </div>
+            ) : (
+              infoPortafolioProyectoArray
+                .slice(6, cantProyectos)
+                .map((proyecto, index) => (
+                  <div
+                    key={`extra-${index}`}
+                    className="portafolio-proyectos-item"
+                    onClick={() => funcionSeleccionarProyecto(index + 6)}
+                    data-aos="fade-in"
+                    
+                  >
+                    <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
+                  </div>
+                ))
+            ))}
+        </section>
+      }
+
+<section className="portafolio-proyectos-mobile">
+  {/* Mostrar primeros 3 proyectos si la categoría es 'todos' o 'all' */}
+  {(categoriaSeleccionada === "todos" || categoriaSeleccionada === "all") &&
+    infoPortafolioProyectoArray
+      .slice(0, 3)
+      .map((proyecto, index) => (
+        <div
+          key={index}
+          className="portafolio-proyectos-item"
+          onClick={() => funcionSeleccionarProyecto(index)}
+          data-aos="fade-in"
+          data-aos-delay="1000"
+        >
+          <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
+        </div>
+      ))}
+
+  {/* Mostrar nuevos proyectos con spinner si se hizo clic en 'ver más' */}
+  {verMasClicked && (categoriaSeleccionada === "todos" || categoriaSeleccionada === "all") && (
+    loading ? (
+      <div className="d-flex justify-content-center align-items-center" style={{ height: "200px" }}>
+        <Spinner animation="border" variant="primary" />
+      </div>
+    ) : (
+      infoPortafolioProyectoArray
+        .slice(3, cantProyectosMobile)
+        .map((proyecto, index) => (
+          <div
+            key={`extra-mobile-${index}`}
+            className="portafolio-proyectos-item"
+            onClick={() => funcionSeleccionarProyecto(index + 3)}
+            data-aos="fade-in"
+            data-aos-delay="1000"
+          >
+            <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
+          </div>
+        ))
+    )
+  )}
+
+  {/* Si hay categoría filtrada diferente de "todos" */}
+  {categoriaSeleccionada !== "todos" && categoriaSeleccionada !== "all" &&
+    infoPortafolioProyectoArray
+      .filter((proyecto) => proyecto.categoria === categoriaSeleccionada)
+      .map((proyecto, index) => (
+        <div
+          key={`filtered-${index}`}
+          className="portafolio-proyectos-item"
+          onClick={() => funcionSeleccionarProyecto(index)}
+        >
+          <img src={proyecto.imagenRecuadro} alt={proyecto.titulo} />
+        </div>
+      ))}
+</section>
+
 
       {verMas && proyectosFiltrados.length > 6 && (
         <section className="portafolio-proyectos-btn-verMas">

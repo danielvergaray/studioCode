@@ -458,6 +458,7 @@ const InfoContextProvider = ({ children }) => {
           pretitulo: "CONTÁCTANOS",
           titulo: "Hablemos de nuestro próximo proyecto juntos",
           mensaje: "ENVÍANOS UN MENSAJE",
+          link: "https://wa.me/51950011434",
         },
       ],
       colores: [

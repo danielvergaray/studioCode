@@ -11,6 +11,8 @@ const Home = () => {
   const [showFinalPosition, setShowFinalPosition] = useState(false);
   const [primeraPantalla, setPrimeraPantalla] = useState(true);
   const [primeraPantallaMobile, setPrimeraPantallaMobile] = useState(true);
+  const [secondTitle, setSecondTitle] = useState(false);
+  const [tituloCompleto, setTituloCompleto] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -30,6 +32,19 @@ const Home = () => {
     const timerPaantalla = setTimeout(() => {
       setPrimeraPantallaMobile(false);
     }, 4000);
+  });
+
+  /* Para que el segundo titulo aparezca despues que se muestre el primero */
+  useEffect(() => {
+    const timerSecondTitle = setTimeout(() => {
+      setSecondTitle(true);
+    }, 6500);
+  });
+
+  useEffect(() => {
+    const timerTituloCompleto = setTimeout(() => {
+      setTituloCompleto(true);
+    }, 10000);
   });
 
   return (
@@ -58,15 +73,15 @@ const Home = () => {
                 data-aos="zoom-in"
               />
             </motion.div>
-            {!primeraPantalla && (
-              <div className="home_desktop-navbar-idioma animate__animated animate__fadeIn animate__slow animate__delay-3s">
+            {!primeraPantalla && tituloCompleto && (
+              <div className="home_desktop-navbar-idioma animate__animated animate__fadeIn animate__slow animate__delay-1s">
                 <DropdownMaker primerIdioma="ESPAÑOL" segundoIdioma="ENGLISH" />
               </div>
             )}
           </div>
 
           <div className="home_mobile-navbar">
-            {!primeraPantalla ? (
+            {!primeraPantalla && tituloCompleto ? (
               <div className="home_mobile-navbar-idioma">
                 <DropdownMaker primerIdioma="ESP" segundoIdioma="ENG" />
               </div>
@@ -116,13 +131,15 @@ const Home = () => {
                     showCursor={false}
                   />
                 </p>
-                <p>
-                  <ReactTyped
-                    strings={[`${info.nombreEmpresa}`]}
-                    startWhenVisible
-                    typeSpeed={200}
-                  />
-                </p>
+                {secondTitle && (
+                  <p>
+                    <ReactTyped
+                      strings={[`${info.nombreEmpresa}`]}
+                      startWhenVisible
+                      typeSpeed={200}
+                    />
+                  </p>
+                )}
               </>
             )}
           </div>
@@ -135,7 +152,7 @@ const Home = () => {
                   <ReactTyped
                     strings={[`${info.titulo}`]}
                     startWhenVisible
-                    typeSpeed={150}
+                    typeSpeed={200}
                     showCursor={false}
                   />
                 </p>
@@ -145,9 +162,9 @@ const Home = () => {
                   <ReactTyped
                     strings={[`${info.nombreEmpresaMobile}`]}
                     startWhenVisible
-                    typeSpeed={150}
+                    typeSpeed={200}
                     showCursor={false}
-                    startDelay={2000}
+                    startDelay={3000}
                   />
                 </p>
                 <p>
@@ -155,25 +172,25 @@ const Home = () => {
                   <ReactTyped
                     strings={[`${info.nombreEmpresaMobile2}`]}
                     startWhenVisible
-                    typeSpeed={150}
+                    typeSpeed={200}
                     showCursor={false}
-                    startDelay={3000}
+                    startDelay={4500}
                   />
                 </p>
               </>
             )}
           </div>
 
-          {!primeraPantalla && (
-            <div className="home_desktop-icon">
+          {!primeraPantalla && tituloCompleto && (
+            <div className="home_desktop-icon animate__delay-1s">
               <img src={info.iconoEstrella} alt="icono-estrella" />
             </div>
           )}
 
-          {!primeraPantalla && (
+          {!primeraPantalla && tituloCompleto && (
             <div
               className="home_desktop-subtitulo
-              animate__animated animate__fadeIn animate__slow animate__delay-3s"
+              animate__animated animate__fadeIn animate__slow animate__delay-1s"
             >
               <p>{info.subtitulo}</p>
             </div>
