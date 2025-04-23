@@ -20,7 +20,7 @@ const Footer = () => {
           key={index}
           className="footer-icon"
           data-aos="fade-in"
-          data-aos-delay="2000"
+          //data-aos-delay="2000"
         >
           <img src={info.iconoEstrella} alt="icono-estrella" />
         </div>
@@ -28,18 +28,38 @@ const Footer = () => {
 
       {infoFooterArray.map((info, index) => (
         <div key={index}>
-          <div className="footer-pretitulo" data-aos="fade-in">
+          <div
+            className="footer-pretitulo"
+            data-aos="fade-in"
+            data-aos-delay="1000"
+          >
             <p>{info.pretitulo}</p>
           </div>
           <div
             className="footer-titulo"
             data-aos="flip-up"
-            data-aos-delay="1000"
+            data-aos-delay="2000"
           >
             <p>{info.titulo}</p>
           </div>
-          <div className="footer-boton">
-            <Link to={info.link} target="_blank" key={index} >
+          <div
+            className="footer-boton"
+            data-aos="fade-in"
+            data-aos-delay="3000"
+          >
+            <Link to={info.link} target="_blank" key={index}>
+              <div className="footer-boton-texto">
+                <p>{info.mensaje}</p>
+              </div>
+
+              <div className="footer-boton-flecha">
+                <FiArrowRight />
+              </div>
+            </Link>
+          </div>
+
+          <div className="footer-boton-mobile">
+            <Link to={info.link} target="_blank" key={index}>
               <div className="footer-boton-texto">
                 <p>{info.mensaje}</p>
               </div>
